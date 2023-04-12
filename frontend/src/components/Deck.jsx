@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Deck = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+function Deck() {
+  return <div />;
+}
 
 export default Deck;
