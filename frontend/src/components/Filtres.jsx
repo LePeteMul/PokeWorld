@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import FiltreType from "./FiltreType";
 
-const Filtres = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+function Filtres() {
+  return (
+    <div>
+      <p>Test appel composant Filtres</p>
+      <FiltreType />
+    </div>
+  );
+}
 
 export default Filtres;
