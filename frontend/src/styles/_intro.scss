@@ -1,0 +1,20 @@
+#intro-filtres-box {
+  background-color: $primary-color;
+  max-width: 300px;
+
+  .intro-box {
+    margin: 20px 10% 20px 10%;
+    max-width: 80%;
+    padding: 5px;
+    box-shadow: $pixel-box-shadow;
+    font-family: $main-font-family;
+    background-color: $secondary-color;
+
+    .intro-title {
+      font-weight: normal;
+    }
+    .intro-bold-words {
+      font-weight: bold;
+    }
+  }
+}

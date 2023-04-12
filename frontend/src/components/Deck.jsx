@@ -1,4 +1,5 @@
 import React from "react";
+
 import SearchBar from "./SearchBar";
 import DeckList from "./DeckList";
 import "../styles/_deck.scss";
