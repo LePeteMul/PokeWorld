@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Filtres = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+function Filtres() {
+  return <div />;
+}
 
 export default Filtres;
