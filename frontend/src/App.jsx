@@ -1,5 +1,5 @@
-import Header from "./components/Header";
 import Deck from "./components/Deck";
+import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Filtres from "./components/Filtres";
 
@@ -9,8 +9,8 @@ function App() {
       <Header />
       <Deck />
       <div id="intro-filtres-box">
-        <p>POKEWORLD LOADING............</p>
         <Intro />
+        <br />
         <Filtres />
       </div>
     </div>

@@ -4,7 +4,7 @@ import FiltreType from "./FiltreType";
 
 function Filtres() {
   return (
-    <div>
+    <div className="filtres-box">
       <p>Test appel composant Filtres</p>
       <FiltreType />
     </div>
