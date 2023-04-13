@@ -1,5 +1,5 @@
 import React from "react";
-import headerImgL from "../assets/Pikachu_pix.gif";
+import headerImgL from "../assets/pikachu_pix.gif";
 import headerImgC from "../assets/pokemon-logo-1.png";
 import headerImgR from "../assets/pokeball_pix.png";
 
