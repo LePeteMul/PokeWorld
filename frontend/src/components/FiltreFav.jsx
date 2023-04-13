@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { pokedata } from "./pokedata";
 
 function FiltreFav() {
   const [selectedFavoris, setSelectedFavoris] = useState("all");
@@ -7,11 +6,6 @@ function FiltreFav() {
   const handleTypeChange = (event) => {
     setSelectedFavoris(event.target.value);
   };
-
-  // const filteredData =
-  //   selectedFavoris === "all"
-  //     ? pokedata
-  //     : pokedata.filter((pokemon) => pokemon.favoris === selectedFavoris);
 
   return (
     <div>
@@ -25,13 +19,6 @@ function FiltreFav() {
         <option value="true">true</option>
         <option value="false">false</option>
       </select>
-      {/* <ul>
-        {filteredData.map((pokemon) => (
-          <li key={pokemon.id}>
-            {pokemon.name} ({pokemon.favoris})
-          </li>
-        ))}
-      </ul> */}
     </div>
   );
 }

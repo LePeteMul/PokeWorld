@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { pokedata } from "./pokedata";
 
 function FiltrePoids() {
   const [selectedPoids, setSelectedPoids] = useState("all");
@@ -7,11 +6,6 @@ function FiltrePoids() {
   const handleTypeChange = (event) => {
     setSelectedPoids(event.target.value);
   };
-
-  // const filteredData =
-  //   selectedPoids === "all"
-  //     ? pokedata
-  //     : pokedata.filter((pokemon) => pokemon.poids === selectedPoids);
 
   return (
     <div>
@@ -26,13 +20,6 @@ function FiltrePoids() {
         <option value="medium">medium</option>
         <option value="heavy">heavy</option>
       </select>
-      {/* <ul>
-        {filteredData.map((pokemon) => (
-          <li key={pokemon.id}>
-            {pokemon.name} ({pokemon.poids})
-          </li>
-        ))}
-      </ul> */}
     </div>
   );
 }
