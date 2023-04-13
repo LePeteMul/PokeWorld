@@ -1,9 +1,12 @@
 $primary-color: #f9e8f8;
 $secondary-color: #efeeee;
+$border-color: #646363;
 $bg-blue-color: #2854bd;
 $main-font-family: "Courier New", Courier, monospace;
-$pixel-box-shadow: -8px 0 0 0 #646363, 8px 0 0 0 #646363, 0 -8px 0 0 #646363,
-  0 8px 0 0 #646363;
+$pixel-box-shadow: -8px 0 0 0 $border-color, 8px 0 0 0 $border-color, 0 -8px 0 0 $border-color,
+  0 8px 0 0 $border-color;
+$pixel-box-searchbar: -3px 0 0 0 $border-color, 3px 0 0 0 $border-color, 0 -3px 0 0 $border-color,
+  0 3px 0 0 $border-color; 
   
 * {
   box-sizing: border-box;
