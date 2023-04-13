@@ -1,0 +1,67 @@
+.ContainerCard {
+  display: flex;
+  justify-content: center;
+}
+
+.Card {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  border: 5px solid yellow;
+  border-radius: 15px;
+}
+
+.Name-Hp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+}
+
+.Image {
+  display: flex;
+  background-color: white;
+  width: 90%;
+  justify-content: center;
+  border: 5px solid yellow;
+
+  img {
+    width: 200px;
+  }
+}
+
+.Type {
+  width: 80%;
+  height: 50px;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Physicals {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  border-bottom: 2px solid black;
+}
+
+.Abilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 80%;
+  gap: 10px;
+}
+
+.Ability {
+  display: flex;
+}
