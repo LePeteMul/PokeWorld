@@ -1,12 +1,18 @@
 import React from "react";
-
 import FiltreType from "./FiltreType";
+import FiltreStade from "./FiltreStade";
+import FiltrePoids from "./FiltrePoids";
+import FiltreTaille from "./FiltreTaille";
+import FiltreFav from "./FiltreFav";
 
 function Filtres() {
   return (
     <div>
-      <p>Test appel composant Filtres</p>
       <FiltreType />
+      <FiltreStade />
+      <FiltrePoids />
+      <FiltreTaille />
+      <FiltreFav />
     </div>
   );
 }

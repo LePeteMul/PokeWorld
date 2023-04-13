@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { pokedata } from "./pokedata";
+// import { pokedata } from "./pokedata";
 
 function FiltreType() {
   const [selectedType, setSelectedType] = useState("all");
@@ -8,28 +8,28 @@ function FiltreType() {
     setSelectedType(event.target.value);
   };
 
-  const filteredData =
-    selectedType === "all"
-      ? pokedata
-      : pokedata.filter((pokemon) => pokemon.type === selectedType);
+  // const filteredData =
+  //   selectedType === "all"
+  //     ? pokedata
+  //     : pokedata.filter((pokemon) => pokemon.type === selectedType);
 
   return (
     <div>
-      <p>test entrée dans FiltreType</p>
-      <label htmlFor="type-select">Filter by type:</label>
+      <h1>Filtrer mes pokémons</h1>
+      <label htmlFor="type-select">Type:</label>
       <select id="type-select" value={selectedType} onChange={handleTypeChange}>
         <option value="all">All</option>
         <option value="electro">Electro</option>
         <option value="hydro">Hydro</option>
         <option value="pyro">Pyro</option>
       </select>
-      <ul>
+      {/* <ul>
         {filteredData.map((pokemon) => (
           <li key={pokemon.id}>
             {pokemon.name} ({pokemon.type})
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
