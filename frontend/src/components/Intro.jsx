@@ -1,7 +1,6 @@
 import React from "react";
 
 function Intro() {
-
   return (
     <div className="intro-box">
       <h1 className="intro-title">Bienvenue sur PokeWorld !</h1>
