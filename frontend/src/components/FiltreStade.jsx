@@ -9,13 +9,12 @@ function FiltreStade() {
 
   return (
     <div>
-      <label htmlFor="stade-select">Stade:</label>
       <select
-        id="stade-select"
+        className="filtre-selector"
         value={selectedStade}
         onChange={handleTypeChange}
       >
-        <option value="all">All</option>
+        <option value="all">Stade...</option>
         <option value="base">base</option>
         <option value="stade 1">stade 1</option>
         <option value="stade 2">stade 2</option>

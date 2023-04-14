@@ -9,11 +9,17 @@ function Filtres() {
   return (
     <div className="filtres-box">
       <h3 className="filtres-title">Filtrer</h3>
+      <br />
       <FiltreType />
+      <br />
       <FiltreStade />
+      <br />
       <FiltrePoids />
+      <br />
       <FiltreTaille />
+      <br />
       <FiltreFav />
+      <br />
     </div>
   );
 }

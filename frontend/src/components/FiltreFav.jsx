@@ -8,14 +8,13 @@ function FiltreFav() {
   };
 
   return (
-    <div>
-      <label htmlFor="favoris-select">Favoris:</label>
+    <div className="filtre-selector">
       <select
-        id="favoris-select"
+        className="filtre-selector"
         value={selectedFavoris}
         onChange={handleTypeChange}
       >
-        <option value="all">All</option>
+        <option value="all">Favoris...</option>
         <option value="true">true</option>
         <option value="false">false</option>
       </select>

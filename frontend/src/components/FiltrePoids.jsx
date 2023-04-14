@@ -9,13 +9,12 @@ function FiltrePoids() {
 
   return (
     <div>
-      <label htmlFor="poids-select">Poids:</label>
       <select
-        id="poids-select"
+        className="filtre-selector"
         value={selectedPoids}
         onChange={handleTypeChange}
       >
-        <option value="all">All</option>
+        <option value="all">Poids...</option>
         <option value="light">light</option>
         <option value="medium">medium</option>
         <option value="heavy">heavy</option>

@@ -15,9 +15,12 @@ function FiltreType() {
 
   return (
     <div>
-      <label htmlFor="type-select">Type:</label>
-      <select id="type-select" value={selectedType} onChange={handleTypeChange}>
-        <option value="all">All</option>
+      <select
+        className="filtre-selector"
+        value={selectedType}
+        onChange={handleTypeChange}
+      >
+        <option value="all">Type...</option>
         <option value="electro">Electro</option>
         <option value="hydro">Hydro</option>
         <option value="pyro">Pyro</option>
