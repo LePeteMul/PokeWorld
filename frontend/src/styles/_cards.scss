@@ -1,6 +1,9 @@
 .ContainerCard {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .Card {
@@ -12,6 +15,7 @@
   background-color: lightgrey;
   border: 5px solid yellow;
   border-radius: 15px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .Name-Hp {
