@@ -6,15 +6,19 @@
   justify-content: space-between;
   background-color: $primary-color;
 
-  #gif {
+  #gifs {
     display: flex;
     margin-left: 50px;
-    height: 80px;
-    width: 120px;
+    height: 100px;
+    width: 140px;
+  }
+
+  #pika {
+    width: 100%;
   }
 
   #pokeball {
     margin-right: 50px;
-    width: 8rem;
+    width: 5rem;
   }
 }
