@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from "axios";
+import Cards from "./Cards";
 
 function DeckList() {
   const [pokemonImg, setPokemonImg] = useState();
   const [pokemonName, setPokemonName] = useState();
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClickCardShown = () => {
+    setIsShown((current) => !current);
+  };
 
   useEffect(() => {
     axios
@@ -22,24 +28,10 @@ function DeckList() {
 
   return (
     <div className="DeckList">
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
-      <img src={pokemonImg} alt={pokemonName} />
+      <button onClick={handleClickCardShown} type="button">
+        <img src={pokemonImg} alt={pokemonName} />
+      </button>
+      {isShown && <Cards />}
     </div>
   );
 }
