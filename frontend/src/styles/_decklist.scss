@@ -1,4 +1,5 @@
 .DeckList {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -19,3 +20,10 @@
    
 
 }
+
+  img {
+    width: 20rem;
+    padding: 5px;
+  }
+}
+

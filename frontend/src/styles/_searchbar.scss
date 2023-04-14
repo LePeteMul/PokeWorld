@@ -1,11 +1,13 @@
 $border-color: #646363;
 
 .SearchBar {
- 
   width: 100%;
   font-family: "Courier New", Courier, monospace;
   input {
+
     overflow: hidden;
+
+
     padding: 8px;
     width: 50%;
     display: block;
