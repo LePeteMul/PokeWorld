@@ -21,12 +21,12 @@
     box-shadow: $pixel-box-shadow;
     font-family: $main-font-family;
     background-color: $secondary-color;
-    font-size: 20px;
+    font-size: clamp(0.5rem, 1vw, 1rem); 
     line-height: 1.5;
 
     .intro-title {
       font-weight: normal;
-      font-size: 30px;
+      font-size: clamp(1rem, 2vw, 2rem); 
       line-height: 1;
     }
 
