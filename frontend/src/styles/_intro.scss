@@ -1,0 +1,37 @@
+#intro-filtres-box {
+  background-color: $primary-color;
+  max-width: 20%;
+  height: 75vh;
+  position: fixed;
+  left: 2%;
+  top: 16%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+
+  .intro-box {
+    margin: 0px 10% 20px 10%;
+    position: relative;
+    top: 5%;
+    max-width: 80%;
+    padding: 20px;
+    
+    padding-bottom: 50px;
+    box-shadow: $pixel-box-shadow;
+    font-family: $main-font-family;
+    background-color: $secondary-color;
+    font-size: 20px;
+    line-height: 1.5;
+
+    .intro-title {
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .intro-bold-words {
+      font-weight: bold;
+      
+    }
+  }
+}

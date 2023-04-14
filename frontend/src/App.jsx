@@ -1,12 +1,18 @@
-import Home from "./pages/Home";
-
-import "./App.css";
+import Deck from "./components/Deck";
+import Header from "./components/Header";
+import Intro from "./components/Intro";
+import Filtres from "./components/Filtres";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <Header />
+      <Deck />
+      <div id="intro-filtres-box">
+        <Intro />
+        <br />
+        <Filtres />
+      </div>
     </div>
   );
 }

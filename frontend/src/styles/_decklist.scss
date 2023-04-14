@@ -1,0 +1,28 @@
+.DeckList {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    img {
+        width: 10rem;
+        padding: 10px;
+        margin: 1rem;
+        transition: transform .2;
+        &:hover {
+
+            transform: scale(1.1);
+
+        }
+        &:active {
+            transform: scale(1.2)
+        }
+    }
+   
+
+}
+
+  img {
+    width: 20rem;
+    padding: 5px;
+  }
+
