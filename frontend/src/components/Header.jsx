@@ -6,9 +6,8 @@ import headerImgR from "../assets/pokeball_pix.png";
 function Header() {
   return (
     <div id="header">
-      <div id="gif">
-        {" "}
-        <img src={headerImgL} alt="gif" />
+      <div id="gifs">
+        <img id="pika" src={headerImgL} alt="gif" />
       </div>
       <img id="logo" src={headerImgC} alt="logo-pokemon" />
       <img id="pokeball" src={headerImgR} alt="pokeball" />
