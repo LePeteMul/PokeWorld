@@ -9,13 +9,12 @@ function FiltreTaille() {
 
   return (
     <div>
-      <label htmlFor="taille-select">Taille:</label>
       <select
-        id="taille-select"
+        className="filtre-selector"
         value={selectedTaille}
         onChange={handleTypeChange}
       >
-        <option value="all">All</option>
+        <option value="all">Taille...</option>
         <option value="small">small</option>
         <option value="medium">medium</option>
         <option value="big">big</option>
