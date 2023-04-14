@@ -14,20 +14,24 @@
     position: relative;
     top: 5%;
     max-width: 80%;
-    padding: 10px;
+    padding: 20px;
+    
     padding-bottom: 50px;
     box-shadow: $pixel-box-shadow;
     font-family: $main-font-family;
     background-color: $secondary-color;
-    font-size: 14px;
+    font-size: clamp(0.5rem, 1vw, 1rem); 
+    line-height: 1.5;
 
     .intro-title {
       font-weight: normal;
-      font-size: 24px;
+      font-size: clamp(1rem, 2vw, 2rem); 
+      line-height: 1;
     }
 
     .intro-bold-words {
       font-weight: bold;
+      
     }
   }
 }

@@ -4,10 +4,15 @@
   box-shadow: $pixel-box-shadow;
   max-width: 80%;
   margin: 10px 10% 10px 10%;
-  padding: 10px;
+  padding: 20px;
 
   .filtres-title {
     text-align: center;
     margin-bottom: 5px;
+    font-size: clamp(1rem, 2vw, 2rem);
   }
+}
+
+.filtre-selector {
+  width: 100%;
 }
