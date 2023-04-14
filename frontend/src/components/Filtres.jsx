@@ -7,7 +7,8 @@ import FiltreFav from "./FiltreFav";
 
 function Filtres() {
   return (
-    <div>
+    <div className="filtres-box">
+      <h3 className="filtres-title">Filtrer</h3>
       <FiltreType />
       <FiltreStade />
       <FiltrePoids />

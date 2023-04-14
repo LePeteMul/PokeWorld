@@ -15,7 +15,6 @@ function FiltreType() {
 
   return (
     <div>
-      <h1>Filtrer mes pokémons</h1>
       <label htmlFor="type-select">Type:</label>
       <select id="type-select" value={selectedType} onChange={handleTypeChange}>
         <option value="all">All</option>

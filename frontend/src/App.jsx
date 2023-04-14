@@ -10,6 +10,7 @@ function App() {
       <Deck />
       <div id="intro-filtres-box">
         <Intro />
+        <br />
         <Filtres />
       </div>
     </div>
