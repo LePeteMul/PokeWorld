@@ -1,6 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 export default function DeckList({ name, image }) {
   /*   const [isShown, setIsShown] = useState(false);
 
@@ -19,3 +19,8 @@ export default function DeckList({ name, image }) {
     </div>
   );
 }
+
+DeckList.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
