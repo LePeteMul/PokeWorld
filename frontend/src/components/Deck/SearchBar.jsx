@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/_searchbar.scss";
+import "../../styles/_searchbar.scss";
 import PropTypes from "prop-types";
 
 function SearchBar({ handlePokemonSearch }) {

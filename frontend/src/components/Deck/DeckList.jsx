@@ -11,7 +11,7 @@ export default function DeckList({ name, image }) {
   return (
     <div className="DeckList">
       <img src={image} alt={name} /> <br />
-      {name}
+      <p>{name}</p>
       {/*    <button onClick={handleClickCardShown} type="button">
         <img src={image} alt={name} />
       </button>

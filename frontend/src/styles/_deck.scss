@@ -1,6 +1,8 @@
 @import "./config.scss";
 
 .Deck {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   overflow-y: scroll;
   width: 70%;
   height: 75vh;
