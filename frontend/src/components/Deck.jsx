@@ -4,7 +4,7 @@ import axios from "axios";
 import SearchBar from "./SearchBar";
 import DeckList from "./DeckList";
 
-function Deck() {
+export default function Deck() {
   const [pokemon, setPokemon] = useState([]);
 
   const getPokemon = () => {
@@ -22,10 +22,23 @@ function Deck() {
     getPokemon();
   }, []);
 
+  const handlePokemonSearch = (name) => {
+    const filteredPokemon = [];
+    if (name === "") {
+      getPokemon();
+    }
+    for (const i in pokemon) {
+      if (pokemon[i].data.name.includes(name)) {
+        filteredPokemon.push(pokemon[i]);
+      }
+    }
+    setPokemon(filteredPokemon);
+  };
+
   return (
     <div className="Deck">
       <div className="deckList">
-        <SearchBar />
+        <SearchBar handlePokemonSearch={handlePokemonSearch} />
         <div className="pokemonList">
           {pokemon.map((poke) => (
             <div>
@@ -40,5 +53,3 @@ function Deck() {
     </div>
   );
 }
-
-export default Deck;
