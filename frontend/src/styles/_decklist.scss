@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   img {
     width: 10rem;
     padding: 10px;
@@ -17,8 +16,11 @@
   }
 }
 
-
-  button {
-    border: none;
+img {
+  width: 20rem;
+  padding: 5px;
 }
 
+button {
+  border: none;
+}
