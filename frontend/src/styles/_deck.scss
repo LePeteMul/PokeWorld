@@ -3,7 +3,7 @@
 .Deck {
   overflow-y: scroll;
   width: 70%;
-  // height: 75vh;
+  height: 75vh;
   right: 5%;
   bottom: 5%;
   box-shadow: -10px 0 0 0 $border-color, 10px 0 0 0 $border-color,
@@ -20,4 +20,11 @@
 
 .deckList {
   height: auto;
+}
+
+.pokemonList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
 }
