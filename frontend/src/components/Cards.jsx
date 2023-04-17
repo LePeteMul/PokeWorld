@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { react } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from "axios";
 import "../styles/_cards.scss";
 
 function Cards() {
-  const [data, setData] = useState();
-  const [pokemonName, setPokemonName] = useState();
-  const [weight, setWeight] = useState();
-  const [id, setId] = useState();
-  const [height, setHeight] = useState();
-  const [hp, setHp] = useState();
-  const [type, setType] = useState();
+  const [data, setData] = react.useState();
+  const [pokemonName, setPokemonName] = react.useState();
+  const [weight, setWeight] = react.useState();
+  const [id, setId] = react.useState();
+  const [height, setHeight] = react.useState();
+  const [hp, setHp] = react.useState();
+  const [type, setType] = react.useState();
 
-  useEffect(() => {
+  react.useEffect(() => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/charizard`)
       .then((res) => {

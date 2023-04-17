@@ -14,5 +14,11 @@
 }
 
 .filtre-selector {
+  font-family: 'Courier New', Courier, monospace;
   width: 100%;
+  border-style: none;
+  padding: 5px;
+  box-shadow: -2px 0 0 0 $border-color, 2px 0 0 0 $border-color,
+      0 -2px 0 0 $border-color, 0 2px 0 0 $border-color;
+
 }
