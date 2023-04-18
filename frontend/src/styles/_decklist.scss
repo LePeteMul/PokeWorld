@@ -4,10 +4,17 @@
   align-items: center;
   flex-wrap: wrap;
 
+  .poke-container {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+  }
+
   img {
-    max-width: 10rem;
-    max-height: 8rem;
-    
+    width: 80%;
+    max-height: 10rem;
+    margin: 0 auto;
+
     transition: transform 0.2;
     &:hover {
       transform: scale(1.1);
@@ -16,13 +23,9 @@
       transform: scale(1.2);
     }
   }
-  p {
+  .pokeName {
     margin-bottom: 2rem;
   }
-}
-
-img {
-  width: 20rem;
 }
 
 button {

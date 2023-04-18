@@ -1,20 +1,20 @@
-import React, { react } from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import "../styles/_cards.scss";
 
-function Cards() {
-  const [data, setData] = react.useState();
-  const [pokemonName, setPokemonName] = react.useState();
-  const [weight, setWeight] = react.useState();
-  const [id, setId] = react.useState();
-  const [height, setHeight] = react.useState();
-  const [hp, setHp] = react.useState();
-  const [type, setType] = react.useState();
+export default function Cards({ index }) {
+  const [data, setData] = useState();
+  const [pokemonName, setPokemonName] = useState();
+  const [weight, setWeight] = useState();
+  const [id, setId] = useState();
+  const [height, setHeight] = useState();
+  const [hp, setHp] = useState();
+  const [type, setType] = useState();
 
-  react.useEffect(() => {
+  useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/charizard`)
+      .get(`https://pokeapi.co/api/v2/pokemon/${index}`)
       .then((res) => {
         setData(res.data);
         setPokemonName(res.data.name);
@@ -52,7 +52,7 @@ function Cards() {
           <div className="Weight">
             <p>weight: {weight / 10}kg</p>
           </div>
-          <div className="height">
+          <div className="Height">
             <p>height: {height / 10}m</p>
           </div>
         </div>
@@ -71,4 +71,6 @@ function Cards() {
   );
 }
 
-export default Cards;
+Cards.propTypes = {
+  index: PropTypes.number.isRequired,
+};
