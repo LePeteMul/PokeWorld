@@ -17,7 +17,7 @@ export default function DeckList({ name, image, id }) {
         className="poke-container"
         key={id}
       >
-        <img src={image} alt={name} /> <br />
+        <img className="img-button" src={image} alt={name} /> <br />
       </button>
       {isShown && <Cards index={id} />}
       <p className="pokeName">{name}</p>
