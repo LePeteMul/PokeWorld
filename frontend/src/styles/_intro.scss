@@ -9,6 +9,14 @@
   flex-direction: column;
   justify-content: space-between;
   // gap: 5%;
+  
+  #audio-box {
+    width: 100%;
+  }
+
+  .mute-button:hover {
+    text-shadow: 2px 2px 2px black;
+  }
 
   .intro-box {
     margin: 0px 10% 20px 10%;

@@ -21,9 +21,9 @@ function FiltreType() {
         onChange={handleTypeChange}
       >
         <option value="all">Type...</option>
-        <option value="electro">Electro</option>
-        <option value="hydro">Hydro</option>
-        <option value="pyro">Pyro</option>
+        <option value="electro">Electrik</option>
+        <option value="hydro">Water</option>
+        <option value="pyro">Fire</option>
       </select>
       {/* <ul>
         {filteredData.map((pokemon) => (

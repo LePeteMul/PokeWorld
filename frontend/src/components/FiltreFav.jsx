@@ -14,7 +14,7 @@ function FiltreFav() {
         value={selectedFavoris}
         onChange={handleTypeChange}
       >
-        <option value="all">Favoris...</option>
+        <option value="all">Favorite...</option>
         <option value="true">true</option>
         <option value="false">false</option>
       </select>
