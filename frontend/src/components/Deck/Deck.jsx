@@ -45,6 +45,7 @@ export default function Deck() {
               <DeckList
                 name={poke.data.name}
                 image={poke.data.sprites.other.dream_world.front_default}
+                id={poke.data.id}
               />
             </div>
           ))}
