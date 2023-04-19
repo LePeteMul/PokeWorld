@@ -1,5 +1,4 @@
 import React from "react";
-// import audio from "../assets/audio/titlescreen.mp3";
 
 function Intro() {
   return (
@@ -12,9 +11,6 @@ function Intro() {
         <span className="intro-bold-words">combattre</span> tes pokemon 1ère
         génération préférés !
       </p>
-      {/* <audio id="audio-box" src={audio} loop controls autoPlay muted>
-        <track kind="caption" default srcLang="en" src="" />
-  </audio> */}
     </div>
   );
 }
