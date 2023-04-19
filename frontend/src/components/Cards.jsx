@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import "../styles/_cards.scss";
 
-function Cards() {
+export default function Cards({ index }) {
   const [data, setData] = useState();
   const [pokemonName, setPokemonName] = useState();
   const [weight, setWeight] = useState();
@@ -13,7 +14,7 @@ function Cards() {
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/charizard`)
+      .get(`https://pokeapi.co/api/v2/pokemon/${index}`)
       .then((res) => {
         setData(res.data);
         setPokemonName(res.data.name);
@@ -51,7 +52,7 @@ function Cards() {
           <div className="Weight">
             <p>weight: {weight / 10}kg</p>
           </div>
-          <div className="height">
+          <div className="Height">
             <p>height: {height / 10}m</p>
           </div>
         </div>
@@ -70,4 +71,6 @@ function Cards() {
   );
 }
 
-export default Cards;
+Cards.propTypes = {
+  index: PropTypes.number.isRequired,
+};

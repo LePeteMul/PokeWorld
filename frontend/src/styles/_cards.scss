@@ -3,7 +3,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .Card {
@@ -15,7 +17,7 @@
   background-color: lightgrey;
   border: 5px solid yellow;
   border-radius: 15px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .Name-Hp {
@@ -28,13 +30,16 @@
 
 .Image {
   display: flex;
+  align-items: center;
   background-color: white;
   width: 90%;
+  height: 200px;
   justify-content: center;
   border: 5px solid yellow;
 
   img {
-    width: 200px;
+    width: 90%;
+    height: 90%;
   }
 }
 
@@ -54,6 +59,14 @@
   width: 80%;
   height: 50px;
   border-bottom: 2px solid black;
+}
+
+.Weight {
+  flex-wrap: wrap;
+}
+
+.Height {
+  flex-wrap: wrap;
 }
 
 .Abilities {
