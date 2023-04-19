@@ -46,6 +46,9 @@ export default function Deck() {
                 name={poke.data.name}
                 image={poke.data.sprites.other.dream_world.front_default}
                 id={poke.data.id}
+                type={poke.data.types[0].type.name}
+                height={poke.data.height}
+                weight={poke.data.weight}
               />
             </div>
           ))}

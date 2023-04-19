@@ -1,37 +1,51 @@
-import React, { useState } from "react";
-// import { pokedata } from "./pokedata";
+// import React, { useState } from "react";
 
 function FiltreType() {
-  const [selectedType, setSelectedType] = useState("all");
+  // const [selectedType, setSelectedType] = useState("all");
 
-  const handleTypeChange = (event) => {
-    setSelectedType(event.target.value);
-  };
+  // const handleTypeChange = (event) => {
+  //  setSelectedType(event.target.value);
+  // };
 
-  // const filteredData =
-  //   selectedType === "all"
-  //     ? pokedata
-  //     : pokedata.filter((pokemon) => pokemon.type === selectedType);
+  const typesList = [
+    "bug",
+    "dragon",
+    "electric",
+    "fairy",
+    "fighting",
+    "fire",
+    "flying",
+    "ghost",
+    "grass",
+    "ground",
+    "ice",
+    "normal",
+    "poison",
+    "psychic",
+    "rock",
+    "water",
+  ];
+
+  // const [selectedType, setSelectedType] = useState(typesList[0]);
+
+  const getFilteredPokemon = () => {};
+
+  // const typeSelected = () => {
+  //  .filter(() => {})
+  // }
 
   return (
     <div>
-      <select
-        className="filtre-selector"
-        value={selectedType}
-        onChange={handleTypeChange}
-      >
-        <option value="all">Type...</option>
-        <option value="electro">Electro</option>
-        <option value="hydro">Hydro</option>
-        <option value="pyro">Pyro</option>
+      <select className="filtre-selector">
+        <option value="all">Types</option>
+        {typesList.map((element) => {
+          return (
+            <option key={element} value={element} onClick={getFilteredPokemon}>
+              {element}
+            </option>
+          );
+        })}
       </select>
-      {/* <ul>
-        {filteredData.map((pokemon) => (
-          <li key={pokemon.id}>
-            {pokemon.name} ({pokemon.type})
-          </li>
-        ))}
-      </ul> */}
     </div>
   );
 }
