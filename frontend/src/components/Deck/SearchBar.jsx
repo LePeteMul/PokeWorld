@@ -2,11 +2,11 @@ import React from "react";
 import "../../styles/_searchbar.scss";
 import PropTypes from "prop-types";
 
-function SearchBar({ handlePokemonSearch }) {
+function SearchBar({ handleSearchChange }) {
   return (
     <div className="SearchBar">
       <input
-        onChange={(e) => handlePokemonSearch(e.target.value)}
+        onChange={handleSearchChange}
         id="searchbar"
         onKeyUp="search_animal()"
         type="text"
@@ -18,7 +18,7 @@ function SearchBar({ handlePokemonSearch }) {
 }
 
 SearchBar.propTypes = {
-  handlePokemonSearch: PropTypes.string.isRequired,
+  handleSearchChange: PropTypes.func.isRequired,
 };
 
 export default SearchBar;
