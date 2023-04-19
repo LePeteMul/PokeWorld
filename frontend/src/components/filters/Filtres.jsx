@@ -1,6 +1,5 @@
 import React from "react";
 import FiltreType from "./FiltreType";
-import FiltreStade from "./FiltreStade";
 import FiltrePoids from "./FiltrePoids";
 import FiltreTaille from "./FiltreTaille";
 import FiltreFav from "./FiltreFav";
@@ -10,8 +9,6 @@ function Filtres() {
     <div className="filtres-box">
       <br />
       <FiltreType />
-      <br />
-      <FiltreStade />
       <br />
       <FiltrePoids />
       <br />

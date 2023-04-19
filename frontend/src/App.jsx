@@ -1,7 +1,7 @@
 import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
-import Filtres from "./components/Filtres";
+import Filtres from "./components/filters/Filtres";
 import "./styles/_app.scss";
 
 function App() {
