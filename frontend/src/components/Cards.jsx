@@ -11,6 +11,11 @@ export default function Cards({ index }) {
   const [height, setHeight] = useState();
   const [hp, setHp] = useState();
   const [type, setType] = useState();
+  const [close, setClose] = useState(true);
+
+  const handleClickClose = () => {
+    setClose(!close);
+  };
 
   useEffect(() => {
     axios
@@ -30,7 +35,13 @@ export default function Cards({ index }) {
   }, []);
 
   return (
-    <div className="ContainerCard">
+    <div
+      onClick={handleClickClose}
+      onKeyDown={handleClickClose}
+      role="button"
+      tabIndex={0}
+      className={close ? "ContainerCard" : "close"}
+    >
       <div className="Card">
         <div className="Name-Hp">
           <p>#{id}</p>
