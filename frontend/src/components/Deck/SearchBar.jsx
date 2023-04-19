@@ -18,7 +18,7 @@ function SearchBar({ handleSearchChange }) {
 }
 
 SearchBar.propTypes = {
-  handleSearchChange: PropTypes.string.isRequired,
+  handleSearchChange: PropTypes.func.isRequired,
 };
 
 export default SearchBar;
