@@ -1,27 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import PropTypes from "prop-types";
 import SearchBar from "./SearchBar";
 import DeckList from "./DeckList";
 
-export default function Deck() {
-  const [pokemon, setPokemon] = useState([]);
+export default function Deck({ pokemon }) {
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState(pokemon);
-
-  const getPokemon = () => {
-    const allPokemon = [];
-    for (let i = 1; i < 152; i += 1) {
-      allPokemon.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
-    }
-    axios
-      .all(allPokemon.map((poke) => axios.get(poke)))
-      .then((res) => setPokemon(res))
-      .then(() => console.warn(pokemon));
-  };
-
-  useEffect(() => {
-    getPokemon();
-  }, []);
+  const [filter, setFilter] = useState([]);
 
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
@@ -42,7 +26,7 @@ export default function Deck() {
 
         <div className="pokemonList">
           {filter.map((poke) => (
-            <div>
+            <div key={poke.data.id}>
               <DeckList
                 name={poke.data.name}
                 image={poke.data.sprites.other.dream_world.front_default}
@@ -58,3 +42,6 @@ export default function Deck() {
     </div>
   );
 }
+Deck.propTypes = {
+  pokemon: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
+};
