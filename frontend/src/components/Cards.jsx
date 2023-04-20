@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import "../styles/_cards.scss";
 
-export default function Cards({ index }) {
+export default function Cards({ index, setIsShown }) {
   const [data, setData] = useState();
   const [pokemonName, setPokemonName] = useState();
   const [weight, setWeight] = useState();
@@ -13,8 +13,11 @@ export default function Cards({ index }) {
   const [type, setType] = useState();
   const [close, setClose] = useState(true);
 
+  const cardStyle = `Card ${type}`;
+
   const handleClickClose = () => {
     setClose(!close);
+    setIsShown(false);
   };
 
   useEffect(() => {
@@ -42,7 +45,7 @@ export default function Cards({ index }) {
       tabIndex={0}
       className={close ? "ContainerCard" : "close"}
     >
-      <div className="Card">
+      <div className={cardStyle}>
         <div className="Name-Hp">
           <p>#{id}</p>
           <h2>{pokemonName}</h2>
@@ -84,4 +87,5 @@ export default function Cards({ index }) {
 
 Cards.propTypes = {
   index: PropTypes.number.isRequired,
+  setIsShown: PropTypes.bool.isRequired,
 };

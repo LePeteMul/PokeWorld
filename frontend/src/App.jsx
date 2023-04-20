@@ -3,11 +3,30 @@ import axios from "axios";
 import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
-import Filtres from "./components/Filtres";
+import Filtres from "./components/filters/Filtres";
 import "./styles/_app.scss";
 
 function App() {
+  const typesList = [
+    "bug",
+    "dragon",
+    "electric",
+    "fairy",
+    "fighting",
+    "fire",
+    "flying",
+    "ghost",
+    "grass",
+    "ground",
+    "ice",
+    "normal",
+    "poison",
+    "psychic",
+    "rock",
+    "water",
+  ];
   const [pokemon, setPokemon] = useState([]);
+  const [selectedType, setSelectedType] = useState("");
 
   const getPokemon = () => {
     const allPokemon = [];
@@ -30,9 +49,18 @@ function App() {
         <div id="intro-filtres-box">
           <Intro />
           <br />
-          <Filtres />
+          <Filtres
+            pokemon={pokemon}
+            selectedType={selectedType}
+            setSelectedType={setSelectedType}
+            typesList={typesList}
+          />
         </div>
-        <Deck pokemon={pokemon} />
+        <Deck
+          pokemon={pokemon}
+          selectedType={selectedType}
+          setSelectedType={setSelectedType}
+        />
       </section>
     </div>
   );
