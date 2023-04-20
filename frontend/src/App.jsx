@@ -1,11 +1,47 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
-import Filtres from "./components/Filtres";
-import Deck from "./components/Deck/Deck";
+import Filtres from "./components/filters/Filtres";
 import "./styles/_app.scss";
-/* import { useEffect } from "react"; */
 
 function App() {
+  const typesList = [
+    "bug",
+    "dragon",
+    "electric",
+    "fairy",
+    "fighting",
+    "fire",
+    "flying",
+    "ghost",
+    "grass",
+    "ground",
+    "ice",
+    "normal",
+    "poison",
+    "psychic",
+    "rock",
+    "water",
+  ];
+  const [pokemon, setPokemon] = useState([]);
+  const [selectedType, setSelectedType] = useState("");
+
+  const getPokemon = () => {
+    const allPokemon = [];
+    for (let i = 1; i < 152; i += 1) {
+      allPokemon.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+    }
+    axios
+      .all(allPokemon.map((poke) => axios.get(poke)))
+      .then((res) => setPokemon(res));
+  };
+
+  useEffect(() => {
+    getPokemon();
+  }, []);
+
   return (
     <div>
       <Header />
@@ -13,9 +49,18 @@ function App() {
         <div id="intro-filtres-box">
           <Intro />
           <br />
-          <Filtres />
+          <Filtres
+            pokemon={pokemon}
+            selectedType={selectedType}
+            setSelectedType={setSelectedType}
+            typesList={typesList}
+          />
         </div>
-        <Deck />
+        <Deck
+          pokemon={pokemon}
+          selectedType={selectedType}
+          setSelectedType={setSelectedType}
+        />
       </section>
     </div>
   );

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import "../styles/_cards.scss";
 
-export default function Cards({ index }) {
+export default function Cards({ index, setIsShown }) {
   const [data, setData] = useState();
   const [pokemonName, setPokemonName] = useState();
   const [weight, setWeight] = useState();
@@ -11,10 +11,14 @@ export default function Cards({ index }) {
   const [height, setHeight] = useState();
   const [hp, setHp] = useState();
   const [type, setType] = useState();
+  const [description, setDescription] = useState();
   const [close, setClose] = useState(true);
+
+  const cardStyle = `Card ${type}`;
 
   const handleClickClose = () => {
     setClose(!close);
+    setIsShown(false);
   };
 
   useEffect(() => {
@@ -34,6 +38,17 @@ export default function Cards({ index }) {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon-species/${index}`)
+      .then((res) => {
+        setDescription(res.data.flavor_text_entries[2].flavor_text);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
   return (
     <div
       onClick={handleClickClose}
@@ -42,11 +57,14 @@ export default function Cards({ index }) {
       tabIndex={0}
       className={close ? "ContainerCard" : "close"}
     >
-      <div className="Card">
-        <div className="Name-Hp">
+      <div className={cardStyle}>
+        <div className="Id-Name-Hp">
           <p>#{id}</p>
-          <h2>{pokemonName}</h2>
-          <p>{hp} Hp</p>
+          <h2 className="name">{pokemonName}</h2>
+          <div className="hp">
+            <p>{hp}</p>
+            <p className="fontColor">Hp</p>
+          </div>
         </div>
         <div className="Image">
           <img
@@ -57,18 +75,25 @@ export default function Cards({ index }) {
           />
         </div>
         <div className="Type">
-          <p>type: {type}</p>
+          <p className="title">Type:</p>
+          <p className="type">{type}</p>
         </div>
         <div className="Physicals">
           <div className="Weight">
-            <p>weight: {weight / 10}kg</p>
+            <p className="title">Weight:</p>
+            <p>{weight / 10}kg</p>
           </div>
           <div className="Height">
-            <p>height: {height / 10}m</p>
+            <p className="title">Height:</p>
+            <p>{height / 10}m</p>
           </div>
         </div>
+        <div className="Description">
+          <p className="title">Description :</p>
+          <p className="description">{description}</p>
+        </div>
         <div className="Abilities">
-          <p>Abilities : </p>
+          <p className="title">Abilities :</p>
           <div className="Ability">
             {data
               ? data.abilities.map((value) => {
@@ -84,4 +109,5 @@ export default function Cards({ index }) {
 
 Cards.propTypes = {
   index: PropTypes.number.isRequired,
+  setIsShown: PropTypes.bool.isRequired,
 };

@@ -14,7 +14,7 @@ function FiltreTaille() {
         value={selectedTaille}
         onChange={handleTypeChange}
       >
-        <option value="all">Taille...</option>
+        <option value="all">Height...</option>
         <option value="small">small</option>
         <option value="medium">medium</option>
         <option value="big">big</option>
