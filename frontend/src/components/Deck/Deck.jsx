@@ -3,16 +3,16 @@ import PropTypes from "prop-types";
 import SearchBar from "./SearchBar";
 import DeckList from "./DeckList";
 
-export default function Deck({ pokemon }) {
+export default function Deck({ pokemon, selectedType }) {
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState([]);
+  const [isFiltered, setIsFiltered] = useState([]);
 
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
 
   useEffect(() => {
-    setFilter(
+    setIsFiltered(
       pokemon.filter((el) =>
         el.data.name.toLowerCase().includes(search.toLowerCase())
       )
@@ -25,18 +25,24 @@ export default function Deck({ pokemon }) {
         <SearchBar handleSearchChange={handleSearchChange} />
 
         <div className="pokemonList">
-          {filter.map((poke) => (
-            <div key={poke.data.id}>
-              <DeckList
-                name={poke.data.name}
-                image={poke.data.sprites.other.dream_world.front_default}
-                id={poke.data.id}
-                type={poke.data.types[0].type.name}
-                height={poke.data.height}
-                weight={poke.data.weight}
-              />
-            </div>
-          ))}
+          {isFiltered
+            .filter((e) => {
+              return selectedType === "all"
+                ? { e }
+                : e.data.types[0].type.name === selectedType;
+            })
+            .map((poke) => (
+              <div key={poke.data.id}>
+                <DeckList
+                  name={poke.data.name}
+                  image={poke.data.sprites.other.dream_world.front_default}
+                  id={poke.data.id}
+                  type={poke.data.types[0].type.name}
+                  height={poke.data.height}
+                  weight={poke.data.weight}
+                />
+              </div>
+            ))}
         </div>
       </div>
     </div>
@@ -44,4 +50,5 @@ export default function Deck({ pokemon }) {
 }
 Deck.propTypes = {
   pokemon: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
+  selectedType: PropTypes.string.isRequired,
 };

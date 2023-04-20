@@ -1,46 +1,16 @@
-// import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-function FiltreType() {
-  // const [selectedType, setSelectedType] = useState("all");
-
-  // const handleTypeChange = (event) => {
-  //  setSelectedType(event.target.value);
-  // };
-
-  const typesList = [
-    "bug",
-    "dragon",
-    "electric",
-    "fairy",
-    "fighting",
-    "fire",
-    "flying",
-    "ghost",
-    "grass",
-    "ground",
-    "ice",
-    "normal",
-    "poison",
-    "psychic",
-    "rock",
-    "water",
-  ];
-
-  // const [selectedType, setSelectedType] = useState(typesList[0]);
-
-  const getFilteredPokemon = () => {};
-
-  // const typeSelected = () => {
-  //  .filter(() => {})
-  // }
-
+function FiltreType({ setSelectedType, typesList }) {
+  const handleType = (e) => {
+    setSelectedType(e.target.value);
+  };
   return (
     <div>
-      <select className="filtre-selector">
+      <select className="filtre-selector" onChange={(e) => handleType(e)}>
         <option value="all">Types</option>
         {typesList.map((element) => {
           return (
-            <option key={element} value={element} onClick={getFilteredPokemon}>
+            <option key={element} value={element}>
               {element}
             </option>
           );
@@ -49,5 +19,10 @@ function FiltreType() {
     </div>
   );
 }
+
+FiltreType.propTypes = {
+  setSelectedType: PropTypes.func.isRequired,
+  typesList: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
+};
 
 export default FiltreType;
