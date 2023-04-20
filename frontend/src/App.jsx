@@ -4,7 +4,6 @@ import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Filtres from "./components/Filtres";
-import Deck from "./components/Deck/Deck";
 import "./styles/_app.scss";
 /* import { useEffect } from "react"; */
 
