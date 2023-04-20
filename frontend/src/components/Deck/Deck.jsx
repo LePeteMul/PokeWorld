@@ -27,7 +27,7 @@ export default function Deck({ pokemon, selectedType }) {
         <div className="pokemonList">
           {isFiltered
             .filter((e) => {
-              return selectedType === "all"
+              return selectedType === "all" || selectedType === ""
                 ? { e }
                 : e.data.types[0].type.name === selectedType;
             })

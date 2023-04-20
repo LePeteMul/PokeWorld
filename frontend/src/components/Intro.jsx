@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import audio from "../assets/audio/titlescreen.mp3";
-import speakerMuted from "../assets/speaker-mute.svg";
-import speaker from "../assets/speaker.svg";
+import speakerMuted from "../assets/speaker-mute.png";
+import speaker from "../assets/speaker.png";
 
 function Intro() {
-  const [muted, setMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
-  const toggleMute = () => {
-    if (muted) {
-      setMuted(false);
-    } else {
-      setMuted(true);
-    }
+  const handleToggleMute = () => {
+    setIsMuted((current) => !current);
   };
 
   return (
@@ -24,14 +20,15 @@ function Intro() {
         <span className="intro-bold-words">battle</span> with your favorite
         first generation pokemon !
       </p>
-      <audio src={audio} loop autoPlay>
+      <br />
+      <audio src={audio} loop autoPlay muted={isMuted}>
         <track kind="captions" />
       </audio>
-      <button type="button" onClick={toggleMute}>
-        {muted ? (
-          <img src={speakerMuted} alt="" />
+      <button type="button" onClick={handleToggleMute}>
+        {isMuted ? (
+          <img className="speaker" src={speakerMuted} alt="" />
         ) : (
-          <img src={speaker} alt="" />
+          <img className="speaker" src={speaker} alt="" />
         )}
       </button>
     </div>
