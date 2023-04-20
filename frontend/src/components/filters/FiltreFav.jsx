@@ -8,7 +8,7 @@ function FiltreFav() {
   };
 
   return (
-    <div className="filtre-selector">
+    <div>
       <select
         className="filtre-selector"
         value={selectedFavoris}

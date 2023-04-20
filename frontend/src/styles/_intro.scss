@@ -1,30 +1,16 @@
 #intro-filtres-box {
   background-color: $primary-color;
-  max-width: 20%;
-  // height: 75vh;
-  // position: fixed;
+  max-width: 23%;
+  max-height: 75vh;
   left: 2%;
-  // top: 16%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  // gap: 5%;
-  
-  #audio-box {
-    width: 100%;
-  }
-
-  .mute-button:hover {
-    text-shadow: 2px 2px 2px black;
-  }
 
   .intro-box {
     margin: 0px 10% 20px 10%;
     position: relative;
-    // top: 5%;
     max-width: 80%;
     padding: 20px;
-
     padding-bottom: 50px;
     box-shadow: $pixel-box-shadow;
     font-family: $main-font-family;

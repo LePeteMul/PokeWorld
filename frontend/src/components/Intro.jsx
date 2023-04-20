@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import audio from "../assets/audio/titlescreen.mp3";
-import unmute from "../assets/speaker.svg";
-import mute from "../assets/speaker-mute.svg";
+import speakerMuted from "../assets/speaker-mute.svg";
+import speaker from "../assets/speaker.svg";
 
 function Intro() {
   const [muted, setMuted] = useState(false);
@@ -19,24 +19,19 @@ function Intro() {
       <h1 className="intro-title">Welcome to PokeWorld !</h1>
       <br />
       <p>
-        Here, you can <span className="intro-bold-words">check</span>,{" "}
-        <span className="intro-bold-words">compare</span> and (soon){" "}
-        <span className="intro-bold-words">battle</span> your favorite first
-        generation pokemon !
+        Here, you can <span className="intro-bold-words">search</span>,{" "}
+        <span className="intro-bold-words">compare</span> and (soon) make{" "}
+        <span className="intro-bold-words">battle</span> with your favorite
+        first generation pokemon !
       </p>
-      <audio id="audio-box" src={audio} loop autoPlay muted={muted}>
-        <track kind="captions" default srcLang="en" src="" />
+      <audio src={audio} loop autoPlay>
+        <track kind="captions" />
       </audio>
-      <br />
-      <button
-        className="mute-button"
-        onClick={() => toggleMute(muted)}
-        type="button"
-      >
+      <button type="button" onClick={toggleMute}>
         {muted ? (
-          <img className="speaker-mute" src={mute} alt="" />
+          <img src={speakerMuted} alt="" />
         ) : (
-          <img className="speaker" src={unmute} alt="" />
+          <img src={speaker} alt="" />
         )}
       </button>
     </div>
