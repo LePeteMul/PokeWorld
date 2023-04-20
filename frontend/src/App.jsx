@@ -4,7 +4,9 @@ import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Filtres from "./components/Filtres";
+import Deck from "./components/Deck/Deck";
 import "./styles/_app.scss";
+/* import { useEffect } from "react"; */
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
@@ -24,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
       <Header />
       <section id="main-section">
         <div id="intro-filtres-box">

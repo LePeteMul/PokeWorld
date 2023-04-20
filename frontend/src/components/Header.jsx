@@ -10,7 +10,12 @@ function Header() {
         <img id="pika" src={headerImgL} alt="gif" />
       </div>
       <img id="logo" src={headerImgC} alt="logo-pokemon" />
-      <img id="pokeball" src={headerImgR} alt="pokeball" />
+      <img
+        className="rotate-center"
+        id="pokeball"
+        src={headerImgR}
+        alt="pokeball"
+      />
     </div>
   );
 }
