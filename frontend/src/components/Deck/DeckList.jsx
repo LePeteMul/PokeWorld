@@ -19,7 +19,7 @@ export default function DeckList({ name, image, id }) {
       >
         <img className="img-button" src={image} alt={name} /> <br />
       </button>
-      {isShown && <Cards index={id} />}
+      {isShown && <Cards index={id} setIsShown={setIsShown} />}
       <p className="pokeName">{name}</p>
     </div>
   );
