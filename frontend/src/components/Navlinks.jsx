@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import LoadingPage from "./LoadingPage";
-import MainPage from "./MainPage";
+import LandingPage from "./LandingPage";
+import App from "../App";
 
 function Navlinks() {
   return (
     <Routes>
-      <Route path="/" element={<LoadingPage />} />
-      <Route path="/pokeworld" element={<MainPage />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/AppPokeworld" element={<App />} />
     </Routes>
   );
 }
