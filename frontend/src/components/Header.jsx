@@ -4,13 +4,20 @@ import headerImgC from "../assets/pokemon-logo-1.png";
 import headerImgR from "../assets/pokeball_pix.png";
 
 function Header() {
+
+  
   return (
     <div id="header">
-      <div id="gifs">
+      <div id="gifs" onC>
         <img id="pika" src={headerImgL} alt="gif" />
       </div>
       <img id="logo" src={headerImgC} alt="logo-pokemon" />
-      <img id="pokeball" src={headerImgR} alt="pokeball" />
+      <img
+        className="rotate-center"
+        id="pokeball"
+        src={headerImgR}
+        alt="pokeball"
+      />
     </div>
   );
 }

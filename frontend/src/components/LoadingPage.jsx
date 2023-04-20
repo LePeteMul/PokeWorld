@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/_loadingPage.scss";
 import LoadingImgCTop from "../assets/pokeball_Top.png";
 import LoadingImgCBottom from "../assets/pokeball_Bottom.png";
 import LoadingImgL from "../assets/sacha.png";
 import LoadingImgR from "../assets/pikachu-loading.png";
 import Pokemon from "../assets/pokemon-logo-1.png";
-import "../styles/_loadingPage.scss";
 
 function LoadingPage() {
   return (
@@ -15,15 +16,16 @@ function LoadingPage() {
 
       <div className="Caracters">
         <img className="sacha" src={LoadingImgL} alt="Sacha" />
-
-        <div className="pokeballAnim">
-          <img id="pokeball-top" src={LoadingImgCTop} alt="pokeball-Top" />
-          <img
-            id="pokeball-bottom"
-            src={LoadingImgCBottom}
-            alt="pokeball-Bottom"
-          />
-        </div>
+        <Link to="/pokeworld">
+          <div className="pokeballAnim">
+            <img id="pokeball-top" src={LoadingImgCTop} alt="pokeball-Top" />
+            <img
+              id="pokeball-bottom"
+              src={LoadingImgCBottom}
+              alt="pokeball-Bottom"
+            />
+          </div>
+        </Link>
 
         <img className="pikachu" src={LoadingImgR} alt="Pikachu" />
       </div>
