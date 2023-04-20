@@ -14,7 +14,7 @@ function FiltrePoids() {
         value={selectedPoids}
         onChange={handleTypeChange}
       >
-        <option value="all">Poids...</option>
+        <option value="all">Weight...</option>
         <option value="light">light</option>
         <option value="medium">medium</option>
         <option value="heavy">heavy</option>
