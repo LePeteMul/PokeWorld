@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(10px);
 }
 
 .close {
@@ -22,11 +22,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(7px);
 }
 
 .Card {
-  width: 300px;
+  width: 500px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -35,24 +34,46 @@
   border: 5px solid yellow;
   border-radius: 15px;
   font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
 }
 
-.Name-Hp {
+.title {
+  font-size: 1.5rem;
+}
+
+.Id-Name-Hp {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 50px;
+  height: 70px;
+
+  .name {
+    text-transform: capitalize;
+  }
+
+  .hp {
+    display: flex;
+    gap: 5px;
+  }
+
+  .fontColor {
+    color: rgb(226, 0, 0);
+  }
 }
 
 .Image {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #f7e6e6;
+  background-image: linear-gradient(to bottom, #f7e6e6 50%, #d4d4d4 50%);
+  background-size: auto 10px;
+  background-repeat: repeat-y;
   width: 90%;
-  height: 200px;
+  height: 300px;
   justify-content: center;
   border: 5px solid yellow;
+  box-shadow: 5px 5px 5px grey;
 
   img {
     width: 90%;
@@ -66,7 +87,13 @@
   border-bottom: 2px solid black;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  font-weight: bolder;
+  padding: 20px 0 20px 0;
+
+  .type {
+    text-transform: capitalize;
+  }
 }
 
 .Physicals {
@@ -74,16 +101,38 @@
   justify-content: space-around;
   align-items: center;
   width: 80%;
-  height: 50px;
+  height: 90px;
   border-bottom: 2px solid black;
+
+  .Weight {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .Height {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+    border-left: 2px solid black;
+  }
 }
 
-.Weight {
-  flex-wrap: wrap;
-}
+.Description {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding: 20px 0 20px 0;
 
-.Height {
-  flex-wrap: wrap;
+  .description {
+    font-size: large;
+    text-align: center;
+  }
 }
 
 .Abilities {
@@ -91,13 +140,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: auto;
   width: 80%;
   gap: 10px;
+  padding: 20px 0 20px 0;
 }
 
 .Ability {
-  display: flex;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .normal {
