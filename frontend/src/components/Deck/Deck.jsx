@@ -1,47 +1,32 @@
 import React, { useState, useEffect } from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import axios from "axios";
+import PropTypes from "prop-types";
 import SearchBar from "./SearchBar";
 import DeckList from "./DeckList";
 
-export default function Deck() {
-  const [pokemon, setPokemon] = useState([]);
+export default function Deck({ pokemon }) {
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState([]);
 
-  const getPokemon = () => {
-    const allPokemon = [];
-    // eslint-disable-next-line no-plusplus
-    for (let i = 1; i < 152; i++) {
-      allPokemon.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
-    }
-    axios
-      .all(allPokemon.map((poke) => axios.get(poke)))
-      .then((res) => setPokemon(res));
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value);
   };
 
   useEffect(() => {
-    getPokemon();
-  }, []);
-
-  const handlePokemonSearch = (name) => {
-    const filteredPokemon = [];
-    if (name === "") {
-      getPokemon();
-    }
-    for (const i in pokemon) {
-      if (pokemon[i].data.name.includes(name)) {
-        filteredPokemon.push(pokemon[i]);
-      }
-    }
-    setPokemon(filteredPokemon);
-  };
+    setFilter(
+      pokemon.filter((el) =>
+        el.data.name.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }, [search, pokemon]);
 
   return (
     <div className="Deck">
       <div className="deckList">
-        <SearchBar handlePokemonSearch={handlePokemonSearch} />
+        <SearchBar handleSearchChange={handleSearchChange} />
+
         <div className="pokemonList">
-          {pokemon.map((poke) => (
-            <div>
+          {filter.map((poke) => (
+            <div key={poke.data.id}>
               <DeckList
                 name={poke.data.name}
                 image={poke.data.sprites.other.dream_world.front_default}
@@ -55,3 +40,6 @@ export default function Deck() {
     </div>
   );
 }
+Deck.propTypes = {
+  pokemon: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
+};
