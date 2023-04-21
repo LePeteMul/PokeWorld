@@ -7,6 +7,8 @@ export default function Deck({ pokemon, selectedType, selectedHeight }) {
   const [search, setSearch] = useState("");
   const [isFiltered, setIsFiltered] = useState([]);
 
+  console.info(selectedHeight);
+
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
@@ -27,7 +29,7 @@ export default function Deck({ pokemon, selectedType, selectedHeight }) {
         <div className="pokemonList">
           {isFiltered
             .filter((e) => {
-              return selectedType === "" || selectedHeight === ""
+              return selectedType === ""
                 ? { e }
                 : e.data.types[0].type.name === selectedType;
             })
