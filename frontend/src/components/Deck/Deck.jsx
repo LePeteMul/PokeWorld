@@ -10,7 +10,7 @@ export default function Deck({
   selectedHeight,
 }) {
   const [search, setSearch] = useState("");
-  const [isFiltered, setIsFiltered] = useState(pokemon);
+  const [isFiltered, setIsFiltered] = useState([]);
 
   console.info(selectedHeight);
   const handleSearchChange = (event) => {
@@ -26,7 +26,6 @@ export default function Deck({
   }, [search, pokemon]);
 
   useEffect(() => {
-    setIsFiltered(pokemon);
     const filteredPokemon = pokemon
       .filter(
         (el) =>
