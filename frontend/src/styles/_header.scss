@@ -51,9 +51,16 @@
   .speaker-button {
     position: absolute;
     left: 30%;
-    top: 14%;
+    top: 8%;
     .speaker-img {
       width: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .speaker-button {
+      left: 2%;
+      top: 2%;
     }
   }
 }
