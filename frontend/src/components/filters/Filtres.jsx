@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import FiltreType from "./FiltreType";
 import FiltrePoids from "./FiltrePoids";
 import FiltreTaille from "./FiltreTaille";
-import FiltreFav from "./FiltreFav";
 
 function Filtres({
   pokemon,
@@ -30,8 +29,6 @@ function Filtres({
         selectedHeight={selectedHeight}
         setSelectedHeight={setSelectedHeight}
       />
-      <br />
-      <FiltreFav />
       <br />
     </div>
   );
