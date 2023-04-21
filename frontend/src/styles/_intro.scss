@@ -6,7 +6,6 @@
   flex-direction: column;
 
   .intro-box {
-    
     padding: 20px;
     box-shadow: $pixel-box-shadow;
     font-family: $main-font-family;
@@ -32,7 +31,6 @@
 @media screen and (max-width: 820px) {
   .intro-box {
     display: none;
-
   }
   #intro-filtres-box {
     display: none;
