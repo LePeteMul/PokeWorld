@@ -12,7 +12,6 @@ function LandingPage() {
       <div className="title">
         <img className="pokemon" src={Pokemon} alt="pokemon" />
       </div>
-
       <div className="Caracters">
         <img className="sacha" src={LoadingImgL} alt="Sacha" />
         <Link to="/AppPokeworld">
@@ -23,7 +22,6 @@ function LandingPage() {
 
         <img className="pikachu" src={LoadingImgR} alt="Pikachu" />
       </div>
-
       <div className="catch">
         <p className="enter">Enter the Pokeworld </p>
       </div>
