@@ -26,11 +26,12 @@
 
 .Card {
   width: 25%;
-  height: auto;
+  max-width: 400px;
+  min-width: 350px;
+  max-height: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightgrey;
   border: 5px solid yellow;
   border-radius: 15px;
   font-family: "Courier New", Courier, monospace;
@@ -38,7 +39,7 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 .Id-Name-Hp {
@@ -46,7 +47,8 @@
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 70px;
+  height: auto;
+  padding: 10px 0 10px 0;
 
   .name {
     text-transform: capitalize;
@@ -69,54 +71,56 @@
   background-image: linear-gradient(to bottom, #f7e6e6 50%, #d4d4d4 50%);
   background-size: auto 10px;
   background-repeat: repeat-y;
+  flex-direction: column;
   width: 90%;
-  height: 250px;
+  height: auto;
   justify-content: center;
   border: 5px solid yellow;
   box-shadow: 5px 5px 5px grey;
 
   img {
-    width: 90%;
-    height: 90%;
+    width: 12rem;
+    height: 15rem;
+  }
+
+  .Physicals {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    background-color: yellow;
+    font-size: 1rem;
+
+    .Weight {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      align-items: center;
+      padding: 5px 0 5px 0;
+    }
+
+    .Height {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      align-items: center;
+    }
   }
 }
 
 .Type {
   width: 80%;
-  height: 50px;
+  height: auto;
   border-bottom: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-weight: bolder;
-  padding: 20px 0 20px 0;
+  padding: 10px 0 10px 0;
 
   .type {
     text-transform: capitalize;
-  }
-}
-
-.Physicals {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 80%;
-  height: 90px;
-  border-bottom: 2px solid black;
-
-  .Weight {
-    display: flex;
-    width: 50%;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .Height {
-    display: flex;
-    width: 50%;
-    align-items: center;
-    flex-direction: column;
-    border-left: 2px solid black;
   }
 }
 
@@ -127,7 +131,7 @@
   height: auto;
   align-items: center;
   border-bottom: 2px solid black;
-  padding: 20px 0 20px 0;
+  padding: 15px 0 15px 0;
 
   .description {
     font-size: large;
@@ -137,13 +141,12 @@
 
 .Abilities {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: auto;
   width: 80%;
   gap: 10px;
-  padding: 20px 0 20px 0;
+  padding: 15px 0 15px 0;
 }
 
 .Ability {
