@@ -4,6 +4,7 @@ $border-color: #646363;
   width: 100%;
   font-family: "Courier New", Courier, monospace;
   margin-bottom: 3rem;
+  display: flex;
   input {
     overflow: hidden;
 
@@ -18,6 +19,14 @@ $border-color: #646363;
     &:focus {
       outline: none;
     }
+    .speaker-button {
+      
+      .speaker-img {
+        width: 0.5rem;
+        padding-left: 5%;
+      }
+    }
+    
   }
 
   input[type="text"] {

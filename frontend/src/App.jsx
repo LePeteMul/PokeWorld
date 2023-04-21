@@ -27,6 +27,7 @@ function App() {
   ];
   const [pokemon, setPokemon] = useState([]);
   const [selectedType, setSelectedType] = useState("");
+  const [selectedHeight, setSelectedHeight] = useState("");
 
   const getPokemon = () => {
     const allPokemon = [];
@@ -54,12 +55,14 @@ function App() {
             selectedType={selectedType}
             setSelectedType={setSelectedType}
             typesList={typesList}
+            selectedHeight={selectedHeight}
+            setSelectedHeight={setSelectedHeight}
           />
         </div>
         <Deck
           pokemon={pokemon}
           selectedType={selectedType}
-          setSelectedType={setSelectedType}
+          selectedHeight={selectedHeight}
         />
       </section>
     </div>

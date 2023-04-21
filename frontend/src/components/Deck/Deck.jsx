@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import SearchBar from "./SearchBar";
 import DeckList from "./DeckList";
 
-export default function Deck({ pokemon, selectedType }) {
+export default function Deck({ pokemon, selectedType, selectedHeight }) {
   const [search, setSearch] = useState("");
   const [isFiltered, setIsFiltered] = useState([]);
 
@@ -27,7 +27,7 @@ export default function Deck({ pokemon, selectedType }) {
         <div className="pokemonList">
           {isFiltered
             .filter((e) => {
-              return selectedType === "all" || selectedType === ""
+              return selectedType === "" || selectedHeight === ""
                 ? { e }
                 : e.data.types[0].type.name === selectedType;
             })
@@ -51,4 +51,5 @@ export default function Deck({ pokemon, selectedType }) {
 Deck.propTypes = {
   pokemon: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
   selectedType: PropTypes.string.isRequired,
+  selectedHeight: PropTypes.string.isRequired,
 };

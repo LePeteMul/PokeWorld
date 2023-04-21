@@ -5,7 +5,14 @@ import FiltrePoids from "./FiltrePoids";
 import FiltreTaille from "./FiltreTaille";
 import FiltreFav from "./FiltreFav";
 
-function Filtres({ pokemon, selectedType, setSelectedType, typesList }) {
+function Filtres({
+  pokemon,
+  selectedType,
+  setSelectedType,
+  typesList,
+  selectedHeight,
+  setSelectedHeight,
+}) {
   return (
     <div className="filtres-box">
       <br />
@@ -18,7 +25,11 @@ function Filtres({ pokemon, selectedType, setSelectedType, typesList }) {
       <br />
       <FiltrePoids />
       <br />
-      <FiltreTaille />
+      <FiltreTaille
+        pokemon={pokemon}
+        selectedHeight={selectedHeight}
+        setSelectedHeight={setSelectedHeight}
+      />
       <br />
       <FiltreFav />
       <br />
@@ -31,6 +42,8 @@ Filtres.propTypes = {
   selectedType: PropTypes.string.isRequired,
   setSelectedType: PropTypes.func.isRequired,
   typesList: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
+  selectedHeight: PropTypes.string.isRequired,
+  setSelectedHeight: PropTypes.func.isRequired,
 };
 
 export default Filtres;
