@@ -25,7 +25,6 @@ function LandingPage() {
       <div className="catch">
         <p className="enter">Enter the Pokeworld </p>
       </div>
-   
     </div>
   );
 }
