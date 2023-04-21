@@ -4,6 +4,7 @@ function FiltreType({ setSelectedType, typesList }) {
   const handleType = (e) => {
     setSelectedType(e.target.value);
   };
+
   return (
     <div>
       <select className="filtre-selector" onChange={(e) => handleType(e)}>

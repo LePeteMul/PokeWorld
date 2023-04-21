@@ -11,10 +11,10 @@ function FiltreTaille({ selectedHeight, setSelectedHeight }) {
         value={selectedHeight}
         onChange={(e) => handleTypeChange(e)}
       >
-        <option value="all">Height : all</option>
+        <option value="">Height : all</option>
         <option value="0-1m">0-1m</option>
-        <option value="1-5m">1-5m</option>
-        <option value="+5m">+5m</option>
+        <option value="1-2m">1-2m</option>
+        <option value="+2m">+2m</option>
       </select>
     </div>
   );

@@ -6,11 +6,13 @@ import FiltreTaille from "./FiltreTaille";
 
 function Filtres({
   pokemon,
+  selectedHeight,
+  setSelectedHeight,
+  selectedPoids,
+  setSelectedPoids,
   selectedType,
   setSelectedType,
   typesList,
-  selectedHeight,
-  setSelectedHeight,
 }) {
   return (
     <div className="filtres-box">
@@ -22,7 +24,11 @@ function Filtres({
         typesList={typesList}
       />
       <br />
-      <FiltrePoids />
+      <FiltrePoids
+        pokemon={pokemon}
+        selectedPoids={selectedPoids}
+        setSelectedPoids={setSelectedPoids}
+      />
       <br />
       <FiltreTaille
         pokemon={pokemon}
@@ -38,6 +44,8 @@ Filtres.propTypes = {
   pokemon: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
   selectedType: PropTypes.string.isRequired,
   setSelectedType: PropTypes.func.isRequired,
+  selectedPoids: PropTypes.string.isRequired,
+  setSelectedPoids: PropTypes.func.isRequired,
   typesList: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
   selectedHeight: PropTypes.string.isRequired,
   setSelectedHeight: PropTypes.func.isRequired,
