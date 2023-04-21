@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Filtres from "./components/filters/Filtres";
 import "./styles/_app.scss";
+/* import { useEffect } from "react"; */
 
 function App() {
   const typesList = [
@@ -25,8 +26,11 @@ function App() {
     "rock",
     "water",
   ];
+
   const [pokemon, setPokemon] = useState([]);
   const [selectedType, setSelectedType] = useState("");
+  const [selectedHeight, setSelectedHeight] = useState("");
+  const [selectedPoids, setSelectedPoids] = useState("");
 
   const getPokemon = () => {
     const allPokemon = [];
@@ -43,7 +47,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
       <Header />
       <section id="main-section">
         <div id="intro-filtres-box">
@@ -53,13 +57,20 @@ function App() {
             pokemon={pokemon}
             selectedType={selectedType}
             setSelectedType={setSelectedType}
+            selectedPoids={selectedPoids}
+            setSelectedPoids={setSelectedPoids}
             typesList={typesList}
+            selectedHeight={selectedHeight}
+            setSelectedHeight={setSelectedHeight}
           />
         </div>
         <Deck
           pokemon={pokemon}
           selectedType={selectedType}
+          selectedHeight={selectedHeight}
           setSelectedType={setSelectedType}
+          selectedPoids={selectedPoids}
+          setSelectedPoids={setSelectedPoids}
         />
       </section>
     </div>

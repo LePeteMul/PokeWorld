@@ -26,7 +26,7 @@
     width: 5rem;
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 820px) {
     #header {
       justify-content: center;
     }
@@ -34,15 +34,26 @@
     #pika {
       width: 4.5rem;
       margin-left: 10px;
+      display: none;
     }
     #pokeball {
       margin-right: 15px;
       width: 2.6rem;
+      display: none;
     }
 
     #logo {
-      width: 45%;
-      margin-right: 15px;
+      margin: 0 auto;
+      width: 35%;
+    }
+  }
+
+  .speaker-button {
+    position: absolute;
+    left: 30%;
+    top: 14%;
+    .speaker-img {
+      width: 1.5rem;
     }
   }
 }
