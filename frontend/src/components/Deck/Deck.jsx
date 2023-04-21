@@ -10,8 +10,7 @@ export default function Deck({
   selectedHeight,
 }) {
   const [search, setSearch] = useState("");
-  // eslint-disable-next-line prefer-const
-  let [isFiltered, setIsFiltered] = useState(pokemon);
+  const [isFiltered, setIsFiltered] = useState(pokemon);
 
   console.info(selectedHeight);
   const handleSearchChange = (event) => {
@@ -27,8 +26,8 @@ export default function Deck({
   }, [search, pokemon]);
 
   useEffect(() => {
-    isFiltered = pokemon;
-    const filteredPokemon = isFiltered
+    setIsFiltered(pokemon);
+    const filteredPokemon = pokemon
       .filter(
         (el) =>
           selectedType === "" || el.data.types[0].type.name === selectedType
@@ -53,7 +52,7 @@ export default function Deck({
       );
 
     setIsFiltered(filteredPokemon);
-  }, [selectedType, selectedPoids, selectedHeight]);
+  }, [pokemon, selectedType, selectedPoids, selectedHeight]);
 
   return (
     <div className="Deck">
