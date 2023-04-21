@@ -8,8 +8,8 @@
   height: 75vh;
   right: 5%;
   bottom: 5%;
-  box-shadow: -10px 0 0 0 $border-color, 10px 0 0 0 $border-color,
-    0 -10px 0 0 $border-color, 0 10px 0 0 $border-color;
+  box-shadow: -8px 0 0 0 $border-color, 8px 0 0 0 $border-color,
+    0 -8px 0 0 $border-color, 0 8px 0 0 $border-color;
   background-color: $secondary-color;
 
   &::-webkit-scrollbar-track {

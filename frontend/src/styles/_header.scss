@@ -47,4 +47,13 @@
       width: 35%;
     }
   }
+
+  .speaker-button {
+    position: absolute;
+    left: 30%;
+    top: 14%;
+    .speaker-img {
+      width: 1.5rem;
+    }
+  }
 }

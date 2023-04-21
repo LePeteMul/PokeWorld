@@ -1,26 +1,28 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-function FiltreTaille() {
-  const [selectedTaille, setSelectedTaille] = useState("all");
-
+function FiltreTaille({ selectedHeight, setSelectedHeight }) {
   const handleTypeChange = (event) => {
-    setSelectedTaille(event.target.value);
+    setSelectedHeight(event.target.value);
   };
-
   return (
     <div>
       <select
         className="filtre-selector"
-        value={selectedTaille}
-        onChange={handleTypeChange}
+        value={selectedHeight}
+        onChange={(e) => handleTypeChange(e)}
       >
-        <option value="all">Height...</option>
-        <option value="small">small</option>
-        <option value="medium">medium</option>
-        <option value="big">big</option>
+        <option value="">Height : all</option>
+        <option value="0-1m">0-1m</option>
+        <option value="1-2m">1-2m</option>
+        <option value="+2m">+2m</option>
       </select>
     </div>
   );
 }
+
+FiltreTaille.propTypes = {
+  selectedHeight: PropTypes.string.isRequired,
+  setSelectedHeight: PropTypes.func.isRequired,
+};
 
 export default FiltreTaille;

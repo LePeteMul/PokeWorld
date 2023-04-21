@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-function FiltrePoids() {
-  const [selectedPoids, setSelectedPoids] = useState("all");
-
-  const handleTypeChange = (event) => {
+function FiltrePoids({ selectedPoids, setSelectedPoids }) {
+  const handlePoidsChange = (event) => {
     setSelectedPoids(event.target.value);
   };
 
@@ -12,15 +10,21 @@ function FiltrePoids() {
       <select
         className="filtre-selector"
         value={selectedPoids}
-        onChange={handleTypeChange}
+        onChange={(event) => handlePoidsChange(event)}
       >
-        <option value="all">Weight...</option>
-        <option value="light">light</option>
-        <option value="medium">medium</option>
-        <option value="heavy">heavy</option>
+        <option value="">Weight : all</option>
+        <option value="0-30">0-30</option>
+        <option value="30-100">30-100</option>
+        <option value="100 +">100 +</option>
       </select>
     </div>
   );
 }
+
+FiltrePoids.propTypes = {
+  setSelectedPoids: PropTypes.func.isRequired,
+  selectedPoids: PropTypes.string.isRequired,
+  //  poidsList: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
+};
 
 export default FiltrePoids;
