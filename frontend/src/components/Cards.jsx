@@ -11,7 +11,7 @@ export default function Cards({ index, setIsShown }) {
   const [height, setHeight] = useState();
   const [hp, setHp] = useState();
   const [type, setType] = useState();
-  const [description, setDescription] = useState();
+  const [description, setDescription] = useState("");
   const [close, setClose] = useState(true);
 
   const cardStyle = `Card ${type}`;
@@ -49,6 +49,8 @@ export default function Cards({ index, setIsShown }) {
       });
   }, []);
 
+  const filteredDescription = description.replace(/[^A-Za-z0-9,.! ]/g, "");
+
   return (
     <div
       onClick={handleClickClose}
@@ -73,24 +75,23 @@ export default function Cards({ index, setIsShown }) {
             }
             alt={pokemonName}
           />
+          <div className="Physicals">
+            <div className="Weight">
+              <p className="title">Weight:</p>
+              <p>{weight / 10}kg</p>
+            </div>
+            <div className="Height">
+              <p className="title">Height:</p>
+              <p>{height / 10}m</p>
+            </div>
+          </div>
         </div>
         <div className="Type">
           <p className="title">Type:</p>
           <p className="type">{type}</p>
         </div>
-        <div className="Physicals">
-          <div className="Weight">
-            <p className="title">Weight:</p>
-            <p>{weight / 10}kg</p>
-          </div>
-          <div className="Height">
-            <p className="title">Height:</p>
-            <p>{height / 10}m</p>
-          </div>
-        </div>
         <div className="Description">
-          <p className="title">Description :</p>
-          <p className="description">{description}</p>
+          <p className="description">{filteredDescription}</p>
         </div>
         <div className="Abilities">
           <p className="title">Abilities :</p>
