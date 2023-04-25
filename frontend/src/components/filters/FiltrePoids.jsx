@@ -13,9 +13,9 @@ function FiltrePoids({ selectedPoids, setSelectedPoids }) {
         onChange={(event) => handlePoidsChange(event)}
       >
         <option value="">Weight : all</option>
-        <option value="0-30">0-30</option>
-        <option value="30-100">30-100</option>
-        <option value="100 +">100 +</option>
+        <option value="0-10kg">0-10kg</option>
+        <option value="10-30kg">10-30kg</option>
+        <option value="+30kg">+30kg</option>
       </select>
     </div>
   );

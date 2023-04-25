@@ -7,7 +7,7 @@ import speakerMuted from "../assets/speaker-mute.png";
 import speaker from "../assets/speaker.png";
 
 function Header() {
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   const handleToggleMute = () => {
     setIsMuted((current) => !current);
