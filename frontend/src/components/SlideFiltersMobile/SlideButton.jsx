@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import pokeballButton from "../../assets/Bouton_pokeball.png";
 
-function SlideButton({slideIsOpened, setSlideIsOpened}) {
+function SlideButton({ slideIsOpened, setSlideIsOpened }) {
   const toggleMenu = () => {
     setSlideIsOpened((current) => !current);
     console.info(slideIsOpened);
@@ -18,5 +19,10 @@ function SlideButton({slideIsOpened, setSlideIsOpened}) {
     </div>
   );
 }
+
+SlideButton.propTypes = {
+  slideIsOpened: PropTypes.bool.isRequired,
+  setSlideIsOpened: PropTypes.func.isRequired,
+};
 
 export default SlideButton;
