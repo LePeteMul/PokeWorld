@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Comparator from "./components/Comparator";
 import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Filtres from "./components/filters/Filtres";
 import "./styles/_app.scss";
-/* import { useEffect } from "react"; */
 
 function App() {
   const typesList = [
@@ -31,6 +31,7 @@ function App() {
   const [selectedType, setSelectedType] = useState("");
   const [selectedHeight, setSelectedHeight] = useState("");
   const [selectedPoids, setSelectedPoids] = useState("");
+  const [test, setTest] = useState(false);
 
   const getPokemon = () => {
     const allPokemon = [];
@@ -46,9 +47,29 @@ function App() {
     getPokemon();
   }, []);
 
+  if (test === true) {
+    return (
+      <div>
+        <Header test={test} setTest={setTest} />
+        <section id="main-section-2">
+          <Comparator />
+          <Deck
+            pokemon={pokemon}
+            selectedType={selectedType}
+            selectedHeight={selectedHeight}
+            setSelectedType={setSelectedType}
+            selectedPoids={selectedPoids}
+            setSelectedPoids={setSelectedPoids}
+            test={test}
+          />
+        </section>
+      </div>
+    );
+  }
+
   return (
     <div>
-      <Header />
+      <Header test={test} setTest={setTest} />
       <section id="main-section">
         <div id="intro-filtres-box">
           <Intro />
@@ -71,6 +92,7 @@ function App() {
           setSelectedType={setSelectedType}
           selectedPoids={selectedPoids}
           setSelectedPoids={setSelectedPoids}
+          test={test}
         />
       </section>
     </div>

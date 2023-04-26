@@ -8,6 +8,7 @@ export default function Deck({
   selectedType,
   selectedPoids,
   selectedHeight,
+  test,
 }) {
   const [search, setSearch] = useState("");
   const [isFiltered, setIsFiltered] = useState([]);
@@ -54,11 +55,15 @@ export default function Deck({
   }, [pokemon, selectedType, selectedPoids, selectedHeight]);
 
   return (
-    <div className="Deck">
+    <div className={test === true ? "Deck compareDeck" : "Deck"}>
       <div className="deckList">
         <SearchBar handleSearchChange={handleSearchChange} />
 
-        <div className="pokemonList">
+        <div
+          className={
+            test === true ? "pokemonList comparePokemonList" : "pokemonList"
+          }
+        >
           {isFiltered.map((poke) => (
             <div key={poke.data.id}>
               <DeckList
@@ -81,4 +86,5 @@ Deck.propTypes = {
   selectedPoids: PropTypes.string.isRequired,
   selectedType: PropTypes.string.isRequired,
   selectedHeight: PropTypes.string.isRequired,
+  test: PropTypes.bool.isRequired,
 };
