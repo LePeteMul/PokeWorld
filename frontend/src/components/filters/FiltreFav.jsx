@@ -1,8 +1,10 @@
 function FiltreFav() {
   return (
-    <div>
+    <div className="fav-box">
       <input id="fav-input" type="checkbox" />
-      <label htmlFor="fav-input">Favorites</label>
+      <label htmlFor="fav-input" className="fav-input-text">
+        Favorites
+      </label>
     </div>
   );
 }

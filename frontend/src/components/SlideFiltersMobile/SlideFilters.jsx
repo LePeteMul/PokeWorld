@@ -19,17 +19,20 @@ function SlideFilters({
     visibility = "hide";
   }
   return (
-    <div id="slide-filters-box" className={visibility}>
-      <Filtres
-        pokemon={pokemon}
-        selectedType={selectedType}
-        setSelectedType={setSelectedType}
-        selectedPoids={selectedPoids}
-        setSelectedPoids={setSelectedPoids}
-        typesList={typesList}
-        selectedHeight={selectedHeight}
-        setSelectedHeight={setSelectedHeight}
-      />
+    <div id="slide-filters-shown" className={visibility}>
+      <div className="slide-filters-container">
+        <h2 className="slide-filtres-title">FILTRES</h2>
+        <Filtres
+          pokemon={pokemon}
+          selectedType={selectedType}
+          setSelectedType={setSelectedType}
+          selectedPoids={selectedPoids}
+          setSelectedPoids={setSelectedPoids}
+          typesList={typesList}
+          selectedHeight={selectedHeight}
+          setSelectedHeight={setSelectedHeight}
+        />
+      </div>
     </div>
   );
 }
