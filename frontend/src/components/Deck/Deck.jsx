@@ -12,7 +12,6 @@ export default function Deck({
   const [search, setSearch] = useState("");
   const [isFiltered, setIsFiltered] = useState([]);
 
-  console.info(selectedHeight);
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };

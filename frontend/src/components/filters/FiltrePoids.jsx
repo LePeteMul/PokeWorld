@@ -6,7 +6,7 @@ function FiltrePoids({ selectedPoids, setSelectedPoids }) {
   };
 
   return (
-    <div>
+    <div className="filtre-box">
       <select
         className="filtre-selector"
         value={selectedPoids}

@@ -17,7 +17,6 @@ function App() {
     "fairy",
     "fighting",
     "fire",
-    "flying",
     "ghost",
     "grass",
     "ground",
