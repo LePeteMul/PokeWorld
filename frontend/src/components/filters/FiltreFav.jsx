@@ -1,23 +1,8 @@
-import React, { useState } from "react";
-
 function FiltreFav() {
-  const [selectedFavoris, setSelectedFavoris] = useState("all");
-
-  const handleTypeChange = (event) => {
-    setSelectedFavoris(event.target.value);
-  };
-
   return (
     <div>
-      <select
-        className="filtre-selector"
-        value={selectedFavoris}
-        onChange={handleTypeChange}
-      >
-        <option value="all">Favorite...</option>
-        <option value="true">true</option>
-        <option value="false">false</option>
-      </select>
+      <input id="fav-input" type="checkbox" />
+      <label htmlFor="fav-input">Favorites</label>
     </div>
   );
 }

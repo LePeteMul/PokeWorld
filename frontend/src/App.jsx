@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SlideFilters from "./components/SlideFiltersMobile/SlideFilters";
+import SlideButton from "./components/SlideFiltersMobile/SlideButton";
 import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
@@ -15,7 +17,6 @@ function App() {
     "fairy",
     "fighting",
     "fire",
-    "flying",
     "ghost",
     "grass",
     "ground",
@@ -31,6 +32,7 @@ function App() {
   const [selectedType, setSelectedType] = useState("");
   const [selectedHeight, setSelectedHeight] = useState("");
   const [selectedPoids, setSelectedPoids] = useState("");
+  const [slideIsOpened, setSlideIsOpened] = useState(false);
 
   const getPokemon = () => {
     const allPokemon = [];
@@ -50,6 +52,22 @@ function App() {
     <div>
       <Header />
       <section id="main-section">
+        <SlideFilters
+          slideIsOpened={slideIsOpened}
+          setSlideIsOpened={setSlideIsOpened}
+          pokemon={pokemon}
+          selectedType={selectedType}
+          setSelectedType={setSelectedType}
+          selectedPoids={selectedPoids}
+          setSelectedPoids={setSelectedPoids}
+          typesList={typesList}
+          selectedHeight={selectedHeight}
+          setSelectedHeight={setSelectedHeight}
+        />
+        <SlideButton
+          slideIsOpened={slideIsOpened}
+          setSlideIsOpened={setSlideIsOpened}
+        />
         <div id="intro-filtres-box">
           <Intro />
           <br />
