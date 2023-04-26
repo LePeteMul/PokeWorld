@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SlideFilters from "./components/SlideFiltersMobile/SlideFilters";
 import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
@@ -31,6 +32,7 @@ function App() {
   const [selectedType, setSelectedType] = useState("");
   const [selectedHeight, setSelectedHeight] = useState("");
   const [selectedPoids, setSelectedPoids] = useState("");
+  const [slideIsOpened, setSlideIsOpened] = useState(false);
 
   const getPokemon = () => {
     const allPokemon = [];
@@ -50,6 +52,10 @@ function App() {
     <div>
       <Header />
       <section id="main-section">
+        <SlideFilters
+          slideIsOpened={slideIsOpened}
+          setSlideIsOpened={setSlideIsOpened}
+        />
         <div id="intro-filtres-box">
           <Intro />
           <br />
