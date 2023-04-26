@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Filtres from "./components/filters/Filtres";
 import "./styles/_app.scss";
+/* import { useEffect } from "react"; */
 
 function App() {
   const typesList = [
