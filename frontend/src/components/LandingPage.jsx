@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/_landingPage.scss";
-import LoadingImgC from "../assets/pokeball_pix.png";
-import LoadingImgL from "../assets/sacha.png";
-import LoadingImgR from "../assets/pikachu-loading.png";
-import Pokemon from "../assets/pokemon-logo-1.png";
+import LoadingImgC from "../assets/images/pokeball_pix.png";
+import LoadingImgL from "../assets/images/sacha.png";
+import LoadingImgR from "../assets/images/pikachu-loading.png";
+import Pokemon from "../assets/images/pokemon-logo-1.png";
 
 function LandingPage() {
   return (

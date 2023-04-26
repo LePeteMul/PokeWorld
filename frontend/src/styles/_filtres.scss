@@ -2,11 +2,11 @@
   font-family: $main-font-family;
   background-color: $secondary-color;
   box-shadow: $pixel-box-shadow;
-  overflow-y: scroll;
   max-height: 32vh;
   margin-top: 1rem;
   padding: 0 1rem;
   bottom: 5%;
+  z-index: 2;
 
   .filtres-title {
     text-align: center;
