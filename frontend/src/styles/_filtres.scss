@@ -2,16 +2,30 @@
   font-family: $main-font-family;
   background-color: $secondary-color;
   box-shadow: $pixel-box-shadow;
-  max-width: 80%;
-  margin: 10px 10% 10px 10%;
-  padding: 20px;
+  overflow-y: scroll;
+  max-height: 32vh;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  bottom: 5%;
 
   .filtres-title {
     text-align: center;
     margin-bottom: 5px;
+    font-size: clamp(1rem, 2vw, 2rem);
   }
 }
 
 .filtre-selector {
+  font-family: "Courier New", Courier, monospace;
   width: 100%;
+  border-style: none;
+  padding: 5px;
+  box-shadow: -2px 0 0 0 $border-color, 2px 0 0 0 $border-color,
+    0 -2px 0 0 $border-color, 0 2px 0 0 $border-color;
+}
+
+@media screen and (max-width: 820px) {
+  .filtres-box {
+    display: none;
+  }
 }

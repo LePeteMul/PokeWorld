@@ -1,67 +1,219 @@
 .ContainerCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.close {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Card {
-  width: 300px;
-  height: auto;
+  width: 25%;
+  max-width: 400px;
+  min-width: 350px;
+  max-height: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightgrey;
   border: 5px solid yellow;
   border-radius: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
 }
 
-.Name-Hp {
+.title {
+  font-weight: bolder;
+}
+
+.Id-Name-Hp {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 50px;
+  height: auto;
+  padding: 10px 0 10px 0;
+
+  .name {
+    text-transform: capitalize;
+  }
+
+  .hp {
+    display: flex;
+    gap: 5px;
+  }
+
+  .fontColor {
+    color: rgb(226, 0, 0);
+  }
 }
 
 .Image {
   display: flex;
-  background-color: white;
+  align-items: center;
+  background-color: #f7e6e6;
+  background-image: linear-gradient(to bottom, #f7e6e6 50%, #d4d4d4 50%);
+  background-size: auto 10px;
+  background-repeat: repeat-y;
+  flex-direction: column;
   width: 90%;
+  height: auto;
   justify-content: center;
   border: 5px solid yellow;
+  box-shadow: 5px 5px 5px grey;
 
   img {
-    width: 200px;
+    width: 12rem;
+    height: 15rem;
+  }
+
+  .Physicals {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    background-color: yellow;
+    font-size: 1rem;
+
+    .Weight {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      align-items: center;
+      padding: 5px 0 5px 0;
+    }
+
+    .Height {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      align-items: center;
+    }
   }
 }
 
 .Type {
   width: 80%;
-  height: 50px;
+  height: auto;
   border-bottom: 2px solid black;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  font-weight: bolder;
+  padding: 10px 0 10px 0;
+
+  .type {
+    text-transform: capitalize;
+  }
 }
 
-.Physicals {
+.Description {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
   width: 80%;
-  height: 50px;
+  height: auto;
+  align-items: center;
   border-bottom: 2px solid black;
+  padding: 15px 0 15px 0;
+
+  .description {
+    font-size: large;
+    text-align: center;
+  }
 }
 
 .Abilities {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: auto;
   width: 80%;
   gap: 10px;
+  padding: 15px 0 15px 0;
 }
 
 .Ability {
-  display: flex;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.normal {
+  background-color: #a8a878;
+}
+
+.fire {
+  background-color: #f08030;
+}
+
+.water {
+  background-color: #6890f0;
+}
+
+.electric {
+  background-color: #f8d030;
+}
+
+.grass {
+  background-color: #78c850;
+}
+
+.ice {
+  background-color: #98d8d8;
+}
+
+.fighting {
+  background-color: #c03028;
+}
+
+.poison {
+  background-color: #a040a0;
+}
+
+.ground {
+  background-color: #e0c068;
+}
+
+.flying {
+  background-color: #a890f0;
+}
+
+.psychic {
+  background-color: #f85888;
+}
+
+.bug {
+  background-color: #a8b820;
+}
+
+.rock {
+  background-color: #b8a038;
+}
+
+.ghost {
+  background-color: #705898;
+}
+
+.dragon {
+  background-color: #7038f8;
+}
+
+.fairy {
+  background-color: #ee99ac;
 }

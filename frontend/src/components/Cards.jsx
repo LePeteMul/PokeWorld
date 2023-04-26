@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import "../styles/_cards.scss";
 
-function Cards() {
+export default function Cards({ index, setIsShown }) {
   const [data, setData] = useState();
   const [pokemonName, setPokemonName] = useState();
   const [weight, setWeight] = useState();
@@ -10,10 +11,19 @@ function Cards() {
   const [height, setHeight] = useState();
   const [hp, setHp] = useState();
   const [type, setType] = useState();
+  const [description, setDescription] = useState("");
+  const [close, setClose] = useState(true);
+
+  const cardStyle = `Card ${type}`;
+
+  const handleClickClose = () => {
+    setClose(!close);
+    setIsShown(false);
+  };
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/charizard`)
+      .get(`https://pokeapi.co/api/v2/pokemon/${index}`)
       .then((res) => {
         setData(res.data);
         setPokemonName(res.data.name);
@@ -28,13 +38,35 @@ function Cards() {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon-species/${index}`)
+      .then((res) => {
+        setDescription(res.data.flavor_text_entries[2].flavor_text);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
+  const filteredDescription = description.replace(/[^A-Za-z0-9,.! ]/g, "");
+
   return (
-    <div className="ContainerCard">
-      <div className="Card">
-        <div className="Name-Hp">
+    <div
+      onClick={handleClickClose}
+      onKeyDown={handleClickClose}
+      role="button"
+      tabIndex={0}
+      className={close ? "ContainerCard" : "close"}
+    >
+      <div className={cardStyle}>
+        <div className="Id-Name-Hp">
           <p>#{id}</p>
-          <h2>{pokemonName}</h2>
-          <p>{hp} Hp</p>
+          <h2 className="name">{pokemonName}</h2>
+          <div className="hp">
+            <p>{hp}</p>
+            <p className="fontColor">Hp</p>
+          </div>
         </div>
         <div className="Image">
           <img
@@ -43,20 +75,26 @@ function Cards() {
             }
             alt={pokemonName}
           />
+          <div className="Physicals">
+            <div className="Weight">
+              <p className="title">Weight:</p>
+              <p>{weight / 10}kg</p>
+            </div>
+            <div className="Height">
+              <p className="title">Height:</p>
+              <p>{height / 10}m</p>
+            </div>
+          </div>
         </div>
         <div className="Type">
-          <p>type: {type}</p>
+          <p className="title">Type:</p>
+          <p className="type">{type}</p>
         </div>
-        <div className="Physicals">
-          <div className="Weight">
-            <p>weight: {weight / 10}kg</p>
-          </div>
-          <div className="height">
-            <p>height: {height / 10}m</p>
-          </div>
+        <div className="Description">
+          <p className="description">{filteredDescription}</p>
         </div>
         <div className="Abilities">
-          <p>Abilities : </p>
+          <p className="title">Abilities :</p>
           <div className="Ability">
             {data
               ? data.abilities.map((value) => {
@@ -70,4 +108,7 @@ function Cards() {
   );
 }
 
-export default Cards;
+Cards.propTypes = {
+  index: PropTypes.number.isRequired,
+  setIsShown: PropTypes.bool.isRequired,
+};

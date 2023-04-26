@@ -1,25 +1,66 @@
 #header {
   display: flex;
   width: 100%;
-  height: 150px;
+  max-height: 150px;
+  min-height: 80px;
   align-items: center;
   justify-content: space-between;
   background-color: $primary-color;
 
-  #gif {
-    display: flex;
+  // #gif {
+  //   display: flex;
+  //   margin-left: 50px;
+  // }
+
+  #pika {
     margin-left: 50px;
-    height: 80px;
-    width: 120px;
+    width: 10rem;
   }
 
   #logo {
-
+    width: 20%;
   }
 
   #pokeball {
     margin-right: 50px;
-    width: 8rem;
- 
+    width: 5rem;
+  }
+
+  @media screen and (max-width: 820px) {
+    #header {
+      justify-content: center;
+    }
+
+    #pika {
+      width: 4.5rem;
+      margin-left: 10px;
+      display: none;
+    }
+    #pokeball {
+      margin-right: 15px;
+      width: 2.6rem;
+      display: none;
+    }
+
+    #logo {
+      margin: 0 auto;
+      width: 35%;
+    }
+  }
+
+  .speaker-button {
+    position: absolute;
+    left: 20%;
+    top: 8%;
+    .speaker-img {
+      width: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .speaker-button {
+      left: 2%;
+      top: 2%;
+    }
   }
 }

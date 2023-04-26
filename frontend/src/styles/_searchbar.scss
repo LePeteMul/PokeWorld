@@ -3,11 +3,8 @@ $border-color: #646363;
 .SearchBar {
   width: 100%;
   font-family: "Courier New", Courier, monospace;
+  margin-bottom: 3rem;
   input {
-
-    overflow: hidden;
-
-
     padding: 8px;
     width: 50%;
     display: block;
@@ -15,7 +12,7 @@ $border-color: #646363;
     border-style: none;
     box-shadow: -3px 0 0 0 $border-color, 3px 0 0 0 $border-color,
       0 -3px 0 0 $border-color, 0 3px 0 0 $border-color;
-    
+
     &:focus {
       outline: none;
     }
@@ -30,5 +27,11 @@ $border-color: #646363;
     color: $border-color;
     text-align: center;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .SearchBar input {
+    width: 80%;
   }
 }

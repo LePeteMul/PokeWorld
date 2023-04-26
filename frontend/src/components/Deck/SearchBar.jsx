@@ -1,10 +1,12 @@
 import React from "react";
-import "../styles/_searchbar.scss";
+import "../../styles/_searchbar.scss";
+import PropTypes from "prop-types";
 
-function SearchBar() {
+function SearchBar({ handleSearchChange }) {
   return (
     <div className="SearchBar">
       <input
+        onChange={handleSearchChange}
         id="searchbar"
         onKeyUp="search_animal()"
         type="text"
@@ -14,5 +16,9 @@ function SearchBar() {
     </div>
   );
 }
+
+SearchBar.propTypes = {
+  handleSearchChange: PropTypes.func.isRequired,
+};
 
 export default SearchBar;
