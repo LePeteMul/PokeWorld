@@ -34,11 +34,11 @@ export default function Deck({
       .filter(
         (el) =>
           selectedPoids === "" ||
-          (selectedPoids === "0-30" && el.data.weight < 30) ||
-          (selectedPoids === "30-100" &&
-            el.data.weight >= 30 &&
-            el.data.weight <= 100) ||
-          (selectedPoids === "100 +" && el.data.weight > 100)
+          (selectedPoids === "0-10kg" && el.data.weight < 100) ||
+          (selectedPoids === "10-30kg" &&
+            el.data.weight >= 100 &&
+            el.data.weight <= 300) ||
+          (selectedPoids === "+30kg" && el.data.weight > 300)
       )
       .filter(
         (el) =>

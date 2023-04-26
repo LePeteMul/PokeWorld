@@ -6,13 +6,13 @@
   flex-direction: column;
 
   .intro-box {
-    
     padding: 20px;
     box-shadow: $pixel-box-shadow;
     font-family: $main-font-family;
     background-color: $secondary-color;
     font-size: clamp(0.8rem, 1vw, 1rem);
     line-height: 1.5;
+    margin-bottom: 1rem;
 
     .intro-title {
       font-weight: normal;
@@ -29,7 +29,6 @@
 @media screen and (max-width: 820px) {
   .intro-box {
     display: none;
-
   }
   #intro-filtres-box {
     display: none;
