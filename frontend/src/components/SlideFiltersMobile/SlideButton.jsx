@@ -7,8 +7,15 @@ function SlideButton({ slideIsOpened, setSlideIsOpened }) {
     console.info(slideIsOpened);
   };
 
+  let visibility = "hide";
+  if (slideIsOpened) {
+    visibility = "show";
+  } else {
+    visibility = "hide";
+  }
+
   return (
-    <div className="pokeball-button-box">
+    <div id="pokeball-button-box" className={visibility}>
       <button type="button" onClick={toggleMenu}>
         <img
           className="pokeball-button"
