@@ -4,13 +4,24 @@ import Cards from "../Cards";
 
 export default function DeckList({ name, image, id }) {
   const [isShown, setIsShown] = useState(false);
+  const [favorite, setFavorite] = useState(false);
 
   const handleClickCardShown = () => {
     setIsShown((current) => !current);
   };
 
+  const handleClickFavorite = () => {
+    setFavorite(!favorite);
+  };
+
   return (
     <div className="DeckList">
+      <div
+        id="favorite"
+        onClick={handleClickFavorite}
+        role="presentation"
+        className={favorite ? "isFavorite" : "notFavorite"}
+      />
       <button
         onClick={handleClickCardShown}
         type="button"
