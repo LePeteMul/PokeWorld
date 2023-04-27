@@ -33,8 +33,9 @@ function App() {
   const [selectedHeight, setSelectedHeight] = useState("");
   const [selectedPoids, setSelectedPoids] = useState("");
   const [slideIsOpened, setSlideIsOpened] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
-  const getPokemon = () => {
+  function getPokemon() {
     const allPokemon = [];
     for (let i = 1; i < 152; i += 1) {
       allPokemon.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
@@ -42,7 +43,7 @@ function App() {
     axios
       .all(allPokemon.map((poke) => axios.get(poke)))
       .then((res) => setPokemon(res));
-  };
+  }
 
   useEffect(() => {
     getPokemon();
@@ -63,6 +64,8 @@ function App() {
           typesList={typesList}
           selectedHeight={selectedHeight}
           setSelectedHeight={setSelectedHeight}
+          isClicked={isClicked}
+          setIsClicked={setIsClicked}
         />
         <SlideButton
           slideIsOpened={slideIsOpened}
@@ -80,6 +83,8 @@ function App() {
             typesList={typesList}
             selectedHeight={selectedHeight}
             setSelectedHeight={setSelectedHeight}
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
           />
         </div>
         <Deck
@@ -89,6 +94,7 @@ function App() {
           setSelectedType={setSelectedType}
           selectedPoids={selectedPoids}
           setSelectedPoids={setSelectedPoids}
+          isClicked={isClicked}
         />
       </section>
     </div>

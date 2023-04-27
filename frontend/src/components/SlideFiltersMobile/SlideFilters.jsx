@@ -11,6 +11,8 @@ function SlideFilters({
   selectedType,
   setSelectedType,
   typesList,
+  isClicked,
+  setIsClicked,
 }) {
   let visibility = "hide";
   if (slideIsOpened) {
@@ -31,6 +33,8 @@ function SlideFilters({
           typesList={typesList}
           selectedHeight={selectedHeight}
           setSelectedHeight={setSelectedHeight}
+          isClicked={isClicked}
+          setIsClicked={setIsClicked}
         />
       </div>
     </div>
@@ -47,5 +51,7 @@ SlideFilters.propTypes = {
   typesList: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
   selectedHeight: PropTypes.string.isRequired,
   setSelectedHeight: PropTypes.func.isRequired,
+  isClicked: PropTypes.bool.isRequired,
+  setIsClicked: PropTypes.func.isRequired,
 };
 export default SlideFilters;
