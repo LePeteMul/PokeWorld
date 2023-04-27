@@ -32,6 +32,7 @@ function Header() {
         )}
       </button>
       <img id="logo" src={headerImgC} alt="logo-pokemon" />
+
       <img
         className="rotate-center"
         id="pokeball"
