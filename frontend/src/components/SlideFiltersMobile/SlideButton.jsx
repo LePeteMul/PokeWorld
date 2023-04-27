@@ -4,7 +4,6 @@ import pokeballButton from "../../assets/images/pokeball_pix.png";
 function SlideButton({ slideIsOpened, setSlideIsOpened }) {
   const toggleMenu = () => {
     setSlideIsOpened((current) => !current);
-    console.info(slideIsOpened);
   };
 
   let visibility = "hide";
