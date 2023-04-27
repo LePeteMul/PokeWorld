@@ -6,7 +6,7 @@ function FiltreType({ setSelectedType, typesList }) {
   };
 
   return (
-    <div>
+    <div className="filtre-box">
       <select className="filtre-selector" onChange={(e) => handleType(e)}>
         <option value="">Types : all</option>
         {typesList.map((element) => {

@@ -5,7 +5,7 @@ function FiltreTaille({ selectedHeight, setSelectedHeight }) {
     setSelectedHeight(event.target.value);
   };
   return (
-    <div>
+    <div className="filtre-box">
       <select
         className="filtre-selector"
         value={selectedHeight}

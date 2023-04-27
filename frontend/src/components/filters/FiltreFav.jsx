@@ -1,25 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
-function FiltreFav() {
-  const [selectedFavoris, setSelectedFavoris] = useState("all");
-
-  const handleTypeChange = (event) => {
-    setSelectedFavoris(event.target.value);
+function FiltreFav({ isClicked, setIsClicked }) {
+  const handleClickIsFav = () => {
+    setIsClicked(!isClicked);
   };
 
   return (
     <div>
-      <select
-        className="filtre-selector"
-        value={selectedFavoris}
-        onChange={handleTypeChange}
-      >
-        <option value="all">Favorite...</option>
-        <option value="true">true</option>
-        <option value="false">false</option>
-      </select>
+      <input
+        id="fav-input"
+        type="checkbox"
+        checked={isClicked}
+        onClick={handleClickIsFav}
+      />
+      <label htmlFor="fav-input">Favorites</label>
     </div>
   );
 }
+
+FiltreFav.propTypes = {
+  isClicked: PropTypes.bool.isRequired,
+  setIsClicked: PropTypes.func.isRequired,
+};
 
 export default FiltreFav;
