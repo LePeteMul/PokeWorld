@@ -27,7 +27,7 @@ function App() {
     "rock",
     "water",
   ];
-
+  const [idCompareCard, setIdCompareCard] = useState(0);
   const [pokemon, setPokemon] = useState([]);
   const [selectedType, setSelectedType] = useState("");
   const [selectedHeight, setSelectedHeight] = useState("");
@@ -49,14 +49,17 @@ function App() {
   useEffect(() => {
     getPokemon();
   }, []);
+console.log (idCompareCard+"dans App")
 
   if (test === true) {
     return (
       <div>
         <Header test={test} setTest={setTest} />
         <section id="main-section-2">
-          <Comparator />
+          <Comparator idCompareCard={idCompareCard} />
           <Deck
+            idCompareCard={idCompareCard}
+            setIdCompareCard={setIdCompareCard}
             pokemon={pokemon}
             selectedType={selectedType}
             selectedHeight={selectedHeight}

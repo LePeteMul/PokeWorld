@@ -12,6 +12,8 @@ export default function CardsCompare({ index }) {
   const [defense, setDefense] = useState();
   const [speed, setSpeed] = useState();
 
+  console.log(index+"dans CardsCompare")
+  
   useEffect(() => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${index}`)
@@ -27,7 +29,7 @@ export default function CardsCompare({ index }) {
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [index]);
 
   return (
     <div className="card-compare">

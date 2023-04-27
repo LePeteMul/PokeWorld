@@ -10,6 +10,8 @@ export default function Deck({
   selectedHeight,
   test,
   isClicked,
+  idCompareCard,
+  setIdCompareCard
 }) {
   const [search, setSearch] = useState("");
   const [isFiltered, setIsFiltered] = useState([]);
@@ -72,6 +74,8 @@ export default function Deck({
           {isFiltered.map((poke) => (
             <div key={poke.data.id}>
               <DeckList
+                idCompareCard={idCompareCard}
+                setIdCompareCard={setIdCompareCard}
                 name={poke.data.name}
                 image={poke.data.sprites.other.dream_world.front_default}
                 id={poke.data.id}

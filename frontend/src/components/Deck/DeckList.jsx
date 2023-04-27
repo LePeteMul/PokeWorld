@@ -4,7 +4,14 @@ import PropTypes from "prop-types";
 import CardsCompare from "@components/CardsCompare";
 import Cards from "../Cards";
 
-export default function DeckList({ name, image, id, test }) {
+export default function DeckList({
+  name,
+  image,
+  id,
+  test,
+  idCompareCard,
+  setIdCompareCard,
+}) {
   const [isShown, setIsShown] = useState(false);
   const [cardCompare, setCardCompare] = useState(false);
   const [favorite, setFavorite] = useState(
@@ -17,10 +24,15 @@ export default function DeckList({ name, image, id, test }) {
     setIsShown((current) => !current);
   };
 
-  const handleClickCardCompare = () => {
-    setCardCompare((current) => !current);
-  };
+  // const handleClickCardCompare = () => {
+  //   setCardCompare((current) => !current);
+  // };
 
+  const handleClickDisplayCompareCard = () => {
+    setIdCompareCard(id);
+  };
+  console.log(idCompareCard)
+  
   const handleClickFavorite = () => {
     if (!Array.isArray(JSON.parse(localStorage.getItem("is-fav")))) {
       localStorage.setItem("is-fav", JSON.stringify([]));
@@ -60,7 +72,7 @@ export default function DeckList({ name, image, id, test }) {
         </button>
       ) : (
         <button
-          onClick={handleClickCardCompare}
+          onClick={handleClickDisplayCompareCard}
           type="button"
           className="poke-container"
           key={id}
