@@ -14,7 +14,9 @@ function FiltreFav({ isClicked, setIsClicked }) {
         checked={isClicked}
         onClick={handleClickIsFav}
       />
-      <label htmlFor="fav-input">Favorites</label>
+      <label htmlFor="fav-input" className="fav-input-text">
+        Favorites
+      </label>
     </div>
   );
 }

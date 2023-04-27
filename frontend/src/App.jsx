@@ -64,6 +64,8 @@ function App() {
           typesList={typesList}
           selectedHeight={selectedHeight}
           setSelectedHeight={setSelectedHeight}
+          isClicked={isClicked}
+          setIsClicked={setIsClicked}
         />
         <SlideButton
           slideIsOpened={slideIsOpened}
