@@ -115,7 +115,6 @@ function App() {
           setSelectedPoids={setSelectedPoids}
           test={test}
           isClicked={isClicked}
-
         />
       </section>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import headerImgL from "../assets/images/pikachu_pix.gif";
 import headerImgC from "../assets/images/pokemon-logo-1.png";
 import headerImgR from "../assets/images/pokeball_pix.png";
