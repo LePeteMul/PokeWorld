@@ -9,7 +9,6 @@ import speaker from "../assets/speaker.png";
 
 function Header({ test, setTest }) {
   const [isMuted, setIsMuted] = useState(true);
-
   const handleToggleTest = () => {
     setTest(!test);
   };
