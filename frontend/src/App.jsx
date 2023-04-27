@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Comparator from "./components/Comparator";
+import SlideFilters from "./components/SlideFiltersMobile/SlideFilters";
+import SlideButton from "./components/SlideFiltersMobile/SlideButton";
 import Deck from "./components/Deck/Deck";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
@@ -15,7 +17,6 @@ function App() {
     "fairy",
     "fighting",
     "fire",
-    "flying",
     "ghost",
     "grass",
     "ground",
@@ -32,8 +33,10 @@ function App() {
   const [selectedHeight, setSelectedHeight] = useState("");
   const [selectedPoids, setSelectedPoids] = useState("");
   const [test, setTest] = useState(false);
+  const [slideIsOpened, setSlideIsOpened] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
-  const getPokemon = () => {
+  function getPokemon() {
     const allPokemon = [];
     for (let i = 1; i < 152; i += 1) {
       allPokemon.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
@@ -41,7 +44,7 @@ function App() {
     axios
       .all(allPokemon.map((poke) => axios.get(poke)))
       .then((res) => setPokemon(res));
-  };
+  }
 
   useEffect(() => {
     getPokemon();
@@ -71,6 +74,22 @@ function App() {
     <div>
       <Header test={test} setTest={setTest} />
       <section id="main-section">
+        <SlideFilters
+          slideIsOpened={slideIsOpened}
+          setSlideIsOpened={setSlideIsOpened}
+          pokemon={pokemon}
+          selectedType={selectedType}
+          setSelectedType={setSelectedType}
+          selectedPoids={selectedPoids}
+          setSelectedPoids={setSelectedPoids}
+          typesList={typesList}
+          selectedHeight={selectedHeight}
+          setSelectedHeight={setSelectedHeight}
+        />
+        <SlideButton
+          slideIsOpened={slideIsOpened}
+          setSlideIsOpened={setSlideIsOpened}
+        />
         <div id="intro-filtres-box">
           <Intro />
           <br />
@@ -83,6 +102,8 @@ function App() {
             typesList={typesList}
             selectedHeight={selectedHeight}
             setSelectedHeight={setSelectedHeight}
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
           />
         </div>
         <Deck
@@ -93,6 +114,8 @@ function App() {
           selectedPoids={selectedPoids}
           setSelectedPoids={setSelectedPoids}
           test={test}
+          isClicked={isClicked}
+
         />
       </section>
     </div>

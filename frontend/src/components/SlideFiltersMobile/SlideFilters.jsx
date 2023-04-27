@@ -1,11 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
-import FiltreType from "./FiltreType";
-import FiltrePoids from "./FiltrePoids";
-import FiltreTaille from "./FiltreTaille";
-import FiltreFav from "./FiltreFav";
+import Filtres from "../filters/Filtres";
 
-function Filtres({
+function SlideFilters({
+  slideIsOpened,
   pokemon,
   selectedHeight,
   setSelectedHeight,
@@ -14,41 +11,31 @@ function Filtres({
   selectedType,
   setSelectedType,
   typesList,
-  isClicked,
-  setIsClicked,
 }) {
+  let visibility = "hide";
+  if (slideIsOpened) {
+    visibility = "show";
+  } else {
+    visibility = "hide";
+  }
   return (
-    <div className="filtres-box">
-      <br />
-      <FiltreType
+    <div id="slide-filters-box" className={visibility}>
+      <Filtres
         pokemon={pokemon}
         selectedType={selectedType}
         setSelectedType={setSelectedType}
-        typesList={typesList}
-      />
-      <br />
-      <FiltrePoids
-        pokemon={pokemon}
         selectedPoids={selectedPoids}
         setSelectedPoids={setSelectedPoids}
-      />
-      <br />
-      <FiltreTaille
-        pokemon={pokemon}
+        typesList={typesList}
         selectedHeight={selectedHeight}
         setSelectedHeight={setSelectedHeight}
-      />
-      <br />
-      <FiltreFav
-        pokemon={pokemon}
-        isClicked={isClicked}
-        setIsClicked={setIsClicked}
       />
     </div>
   );
 }
 
-Filtres.propTypes = {
+SlideFilters.propTypes = {
+  slideIsOpened: PropTypes.bool.isRequired,
   pokemon: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
   selectedType: PropTypes.string.isRequired,
   setSelectedType: PropTypes.func.isRequired,
@@ -57,8 +44,5 @@ Filtres.propTypes = {
   typesList: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
   selectedHeight: PropTypes.string.isRequired,
   setSelectedHeight: PropTypes.func.isRequired,
-  isClicked: PropTypes.bool.isRequired,
-  setIsClicked: PropTypes.func.isRequired,
 };
-
-export default Filtres;
+export default SlideFilters;

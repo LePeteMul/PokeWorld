@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import headerImgL from "../assets/pikachu_pix.gif";
-import headerImgC from "../assets/pokemon-logo-1.png";
-import headerImgR from "../assets/pokeball_pix.png";
+import headerImgL from "../assets/images/pikachu_pix.gif";
+import headerImgC from "../assets/images/pokemon-logo-1.png";
+import headerImgR from "../assets/images/pokeball_pix.png";
 import audio from "../assets/audio/titlescreen.mp3";
-import speakerMuted from "../assets/speaker-mute.png";
-import speaker from "../assets/speaker.png";
+import speakerMuted from "../assets/images/speaker-mute.png";
+import speaker from "../assets/images/speaker.png";
 
 function Header({ test, setTest }) {
   const [isMuted, setIsMuted] = useState(true);
