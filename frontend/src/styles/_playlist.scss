@@ -1,29 +1,38 @@
 .landscape-gif-box {
     background-image: url(../assets/images/pokemonlandscape.gif);
+    background-size: cover;
+    box-shadow: -4px 0 0 0 $border-color, 4px 0 0 0 $border-color,
+      0 -4px 0 0 $border-color, 0 4px 0 0 $border-color;
     position: fixed;
     top: 0;
     left: 20%;
     height: 13%;
     width: 20%;
-    box-shadow: $pixel-box-shadow;
     overflow: scroll;
     .audio-controls {
-      background-color: #ffffff00;
       width: 100%;
     }
     .playlists {
       list-style-type: none;
       background-color: #7f7f7f7a;
       padding-left: 0.5rem;
+      padding-top: 5px;
       line-height: 1.5;
       .playlist-button {
         font-family: $main-font-family;
         font-size: clamp(1rem, 1vw, 1.5rem);
         font-weight: bold;
-        color: white;
-        :hover {
-          text-decoration: underline;
-        }
+        color: white; 
+      }
+      .playlist-button:hover {
+        text-decoration: underline;
       }
     }
+  }
+
+  @media screen and (max-width: 820px) {
+    .landscape-gif-box {
+      display: none;
+    }
+    
   }
