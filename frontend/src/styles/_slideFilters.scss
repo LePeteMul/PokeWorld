@@ -1,7 +1,7 @@
-#slide-filters-box {
-  width: 80vw;
+#slide-filters-shown {
+  width: 90vw;
   height: 100vh;
-  background-color: #2854bd;
+  background-color: $bg-blue-color;
   box-shadow: inset -5px 0px 4px 3px rgba(0, 0, 0, 0.25),
     inset 5px 0px 4px 3px rgba(255, 255, 255, 0.25),
     inset 0px 6px 4px 5px rgba(255, 255, 255, 0.25),
@@ -13,35 +13,35 @@
   overflow: scroll;
   z-index: 2;
   display: none;
+  
 }
 
 #pokeball-button-box {
   position: fixed;
   transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
-  left: -5%;
+  left: -2rem;
   top: 50vh;
   z-index: 1;
   display: none;
 }
 
-.pokeball-button:hover {
-  transition: transform 1s cubic-bezier(0, 0.52, 0, 1);
+.pokeball-button:active {
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
   transform: rotate(720deg);
 }
 
 .pokeball-button {
-  width: 50px;
-  transition: transform 0.2s cubic-bezier(0, 0.52, 0, 1);
-  transform: rotate(0deg);
+  width: 70px;
+  transition: transform 2s cubic-bezier(0, 0.52, 0, 1);
+  transform: rotate(-720deg);
 }
 
-#slide-filters-box.hide {
+#slide-filters-shown.hide {
   transform: translate3d(-100vw, 0, 0);
 }
 
-#slide-filters-box.show {
+#slide-filters-shown.show {
   transform: translate3d(0vw, 0, 0);
-  overflow: hidden;
   .filtres-box {
     width: 100%;
     display: flex;
@@ -54,6 +54,28 @@
   .filtre-box {
     width: 80%;
   }
+  .fav-input-text, .slide-filtres-title {
+    
+    color: white;
+    font-family: $main-font-family;
+    text-shadow: 0px 0px 20px #000000;
+  }
+  .slide-filtres-title {
+    padding-top: 5vh;
+  }
+}
+
+.fav-box {
+    width: 80%;
+    display: flex;
+    gap: 5%;
+    padding-bottom: 5vh;
+
+    #fav-input {
+        box-shadow: -2px 0 0 0 $border-color, 2px 0 0 0 $border-color,
+        0 -2px 0 0 $border-color, 0 2px 0 0 $border-color;
+
+    }
 }
 
 #pokeball-button-box.hide {
@@ -61,12 +83,19 @@
 }
 
 #pokeball-button-box.show {
-  transform: translate3d(80vw, 0, 0);
+  transform: translate3d(90vw, 0, 0);
+}
+
+.slide-filters-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 820px) {
   #pokeball-button-box,
-  #slide-filters-box {
+  #slide-filters-shown {
     display: flex;
   }
 }

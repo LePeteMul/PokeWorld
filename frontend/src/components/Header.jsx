@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import headerImgL from "../assets/images/pikachu_pix.gif";
 import headerImgC from "../assets/images/pokemon-logo-1.png";
 import headerImgR from "../assets/images/pokeball_pix.png";
@@ -6,8 +7,11 @@ import audio from "../assets/audio/titlescreen.mp3";
 import speakerMuted from "../assets/images/speaker-mute.png";
 import speaker from "../assets/images/speaker.png";
 
-function Header() {
+function Header({ test, setTest }) {
   const [isMuted, setIsMuted] = useState(true);
+  const handleToggleTest = () => {
+    setTest(!test);
+  };
 
   const handleToggleMute = () => {
     setIsMuted((current) => !current);
@@ -31,7 +35,11 @@ function Header() {
           <img className="speaker-img" src={speaker} alt="" />
         )}
       </button>
+
       <img id="logo" src={headerImgC} alt="logo-pokemon" />
+      <button onClick={handleToggleTest} type="button" className="togglebutton">
+        Sélecteur / Comparateur{" "}
+      </button>
       <img
         className="rotate-center"
         id="pokeball"
@@ -41,5 +49,10 @@ function Header() {
     </div>
   );
 }
+
+Header.propTypes = {
+  setTest: PropTypes.bool.isRequired,
+  test: PropTypes.string.isRequired,
+};
 
 export default Header;

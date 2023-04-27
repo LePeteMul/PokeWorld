@@ -8,9 +8,12 @@ export default function Deck({
   selectedType,
   selectedPoids,
   selectedHeight,
+  test,
+  isClicked,
 }) {
   const [search, setSearch] = useState("");
   const [isFiltered, setIsFiltered] = useState([]);
+  const favoriteArray = JSON.parse(localStorage.getItem("is-fav"));
 
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
@@ -47,17 +50,25 @@ export default function Deck({
             el.data.height >= 10 &&
             el.data.height <= 20) ||
           (selectedHeight === "+2m" && el.data.height > 20)
+      )
+
+      .filter((el) =>
+        isClicked ? favoriteArray.indexOf(el.data.id) !== -1 : el
       );
 
     setIsFiltered(filteredPokemon);
-  }, [pokemon, selectedType, selectedPoids, selectedHeight]);
+  }, [pokemon, selectedType, selectedPoids, selectedHeight, isClicked]);
 
   return (
-    <div className="Deck">
+    <div className={test === true ? "Deck compareDeck" : "Deck"}>
       <div className="deckList">
         <SearchBar handleSearchChange={handleSearchChange} />
 
-        <div className="pokemonList">
+        <div
+          className={
+            test === true ? "pokemonList comparePokemonList" : "pokemonList"
+          }
+        >
           {isFiltered.map((poke) => (
             <div key={poke.data.id}>
               <DeckList
@@ -80,4 +91,6 @@ Deck.propTypes = {
   selectedPoids: PropTypes.string.isRequired,
   selectedType: PropTypes.string.isRequired,
   selectedHeight: PropTypes.string.isRequired,
+  test: PropTypes.bool.isRequired,
+  isClicked: PropTypes.arrayOf.isRequired,
 };
