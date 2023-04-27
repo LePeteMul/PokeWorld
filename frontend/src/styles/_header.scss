@@ -11,6 +11,15 @@
   //   display: flex;
   //   margin-left: 50px;
   // }
+  
+  .landscape-gif-box {
+    background-image: url(../assets/images/pokemonlandscape.gif);
+    position: fixed;
+    top: 0;
+    left: 20%;
+    height: 20%;
+    box-shadow: $pixel-box-shadow;
+  }
 
   #pika {
     margin-left: 50px;
