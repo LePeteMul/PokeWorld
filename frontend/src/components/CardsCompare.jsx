@@ -4,6 +4,7 @@ import axios from "axios";
 import "../styles/_cardsCompare.scss";
 
 export default function CardsCompare({ index }) {
+  const [name, setName] = useState();
   const [image, setImage] = useState();
   const [hp, setHp] = useState();
   const [type, setType] = useState();
@@ -15,6 +16,7 @@ export default function CardsCompare({ index }) {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${index}`)
       .then((res) => {
+        setName(res.data.name);
         setImage(res.data.sprites.other.dream_world.front_default);
         setHp(res.data.stats[0].base_stat);
         setType(res.data.types[0].type.name);
@@ -31,6 +33,7 @@ export default function CardsCompare({ index }) {
     <div className="card-compare">
       <div className="image-compare">
         <img src={image} alt="card" />
+        <p>{name}</p>
       </div>
       <div className="stats">
         <p>Hp = {hp}</p>

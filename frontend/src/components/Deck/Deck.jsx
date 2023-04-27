@@ -78,6 +78,7 @@ export default function Deck({
                 type={poke.data.types[0].type.name}
                 height={poke.data.height}
                 weight={poke.data.weight}
+                test={test}
               />
             </div>
           ))}
