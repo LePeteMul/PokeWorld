@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 import "../styles/_cardsCompare.scss";
 
-export default function CardsCompare() {
+export default function CardsCompare({ index }) {
   const [image, setImage] = useState();
   const [hp, setHp] = useState();
   const [type, setType] = useState();
@@ -29,7 +30,7 @@ export default function CardsCompare() {
   return (
     <div className="card-compare">
       <div className="image-compare">
-        <img>{image}</img>
+        <img src={image} alt="card" />
       </div>
       <div className="stats">
         <p>Hp = {hp}</p>
@@ -41,3 +42,7 @@ export default function CardsCompare() {
     </div>
   );
 }
+
+CardsCompare.propTypes = {
+  index: PropTypes.number.isRequired,
+};
