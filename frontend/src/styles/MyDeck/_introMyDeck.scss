@@ -1,0 +1,13 @@
+@import "../config.scss";
+
+.IntroMyDeck {
+    width: 23%;
+    height: 40vh;
+    padding: 20px;
+    box-shadow: $pixel-box-shadow;
+    font-family: $main-font-family;
+    background-color: $secondary-color;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}

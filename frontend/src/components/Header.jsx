@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import headerImgL from "../assets/images/pikachu_pix.gif";
 import headerImgC from "../assets/images/pokemon-logo-1.png";
 import headerImgR from "../assets/images/pokeball_pix.png";
@@ -32,7 +33,18 @@ function Header() {
         )}
       </button>
       <img id="logo" src={headerImgC} alt="logo-pokemon" />
-
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/AppPokeworld">Home</Link>
+            </li>
+            <li>
+              <Link to="/MyDeck">My Deck</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <img
         className="rotate-center"
         id="pokeball"
