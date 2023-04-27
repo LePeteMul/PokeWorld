@@ -14,6 +14,8 @@ function Filtres({
   selectedType,
   setSelectedType,
   typesList,
+  isClicked,
+  setIsClicked,
 }) {
   return (
     <div className="filtres-box">
@@ -37,7 +39,11 @@ function Filtres({
         setSelectedHeight={setSelectedHeight}
       />
       <br />
-      <FiltreFav />
+      <FiltreFav
+        pokemon={pokemon}
+        isClicked={isClicked}
+        setIsClicked={setIsClicked}
+      />
     </div>
   );
 }
@@ -51,6 +57,8 @@ Filtres.propTypes = {
   typesList: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
   selectedHeight: PropTypes.string.isRequired,
   setSelectedHeight: PropTypes.func.isRequired,
+  isClicked: PropTypes.bool.isRequired,
+  setIsClicked: PropTypes.func.isRequired,
 };
 
 export default Filtres;

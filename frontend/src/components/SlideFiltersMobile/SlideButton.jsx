@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import pokeballButton from "../../assets/pokeball_pix.png";
+import pokeballButton from "../../assets/images/pokeball_pix.png";
 
 function SlideButton({ slideIsOpened, setSlideIsOpened }) {
   const toggleMenu = () => {
