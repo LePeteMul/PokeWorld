@@ -1,0 +1,25 @@
+@import "../config.scss";
+
+.MyDeckContainer {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  overflow-y: scroll;
+  width: 70%;
+  height: 75vh;
+  box-shadow: -8px 0 0 0 $border-color, 8px 0 0 0 $border-color,
+    0 -8px 0 0 $border-color, 0 8px 0 0 $border-color;
+  background-color: $secondary-color;
+}
+
+.favPokeList {
+  margin-top: -2rem;
+  justify-content: space-around;
+  row-gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardFav {
+  width: 300px;
+  height: 400px;
+}

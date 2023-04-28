@@ -36,10 +36,12 @@ function Header({ test, setTest }) {
         )}
       </button>
 
+
       <img id="logo" src={headerImgC} alt="logo-pokemon" />
       <button onClick={handleToggleTest} type="button" className="togglebutton">
         Sélecteur / Comparateur{" "}
       </button>
+
       <img
         className="rotate-center"
         id="pokeball"
