@@ -1,3 +1,13 @@
+.header-wallpaper {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 25vh;
+  background-image: url(../assets/images/landscapeheader.jpg);
+  background-position: 5% 63%;
+  opacity: 0.5;
+}
+
 #header {
   display: flex;
   width: 100%;
@@ -5,7 +15,7 @@
   min-height: 80px;
   align-items: center;
   justify-content: space-between;
-  background-color: $primary-color;
+  margin-bottom: 3rem;
 
   // #gif {
   //   display: flex;

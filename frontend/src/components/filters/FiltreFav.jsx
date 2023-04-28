@@ -7,7 +7,7 @@ function FiltreFav({ isClicked, setIsClicked }) {
   };
 
   return (
-    <div>
+    <div className="fav-box">
       <input
         id="fav-input"
         type="checkbox"

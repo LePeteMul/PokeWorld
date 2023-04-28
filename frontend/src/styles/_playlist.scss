@@ -2,7 +2,6 @@
     background-image: url(../assets/images/pokemonlandscape.gif);
     background-size: cover;
     overflow: scroll;
-    position: relative;
     .audio-controls {
       width: 100%;
     }
@@ -16,19 +15,12 @@
         font-family: $main-font-family;
         font-size: clamp(1rem, 1vw, 1.5rem);
         font-weight: bold;
-        color: white; 
+        color: rgb(0, 0, 0);
+        text-shadow: 5px 5px 5px #7f7f7f;
       }
       .playlist-button:hover {
         text-decoration: underline;
         cursor: pointer;
       }
     }
-  }
-
-  @media screen and (max-width: 820px) {
-    .landscape-gif-box {
-      position: fixed;
-      display: none;
-    }
-    
   }

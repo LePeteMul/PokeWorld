@@ -7,7 +7,11 @@ import audio5 from "../assets/audio/5-gym.mp3";
 import audio6 from "../assets/audio/6-gymleaderbattle.mp3";
 import audio7 from "../assets/audio/7-lavendertown.mp3";
 import audio8 from "../assets/audio/8-pokemontower.mp3";
-import audio9 from "../assets/audio/9-technosoundeffect.mp3";
+import audio9 from "../assets/audio/9-roadtoveridiancity.mp3";
+import audio10 from "../assets/audio/10-mtmoon.mp3";
+import audio11 from "../assets/audio/11-guide.mp3";
+import audio12 from "../assets/audio/12-rivalappears.mp3";
+import audio13 from "../assets/audio/13-pewtercity.mp3";
 
 function Playlist() {
   const playList = [
@@ -44,8 +48,24 @@ function Playlist() {
       musicSrc: audio8,
     },
     {
-      musicName: "Weird Techno",
+      musicName: "Road to Veridian",
       musicSrc: audio9,
+    },
+    {
+      musicName: "Mount moon",
+      musicSrc: audio10,
+    },
+    {
+      musicName: "Let me guide you",
+      musicSrc: audio11,
+    },
+    {
+      musicName: "Rival appears",
+      musicSrc: audio12,
+    },
+    {
+      musicName: "Pewter city",
+      musicSrc: audio13,
     },
   ];
 

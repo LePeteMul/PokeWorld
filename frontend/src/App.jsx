@@ -80,8 +80,12 @@ function App() {
         <div id="intro-filtres-box">
           <Intro />
           <br />
-          <div className="fl-pl-toggle-button">
-            <button type="button" onClick={handleFilterPl}>
+          <div className="fl-pl-button-box">
+            <button
+              className="fl-pl-button"
+              type="button"
+              onClick={handleFilterPl}
+            >
               Filters/Playlist
             </button>
           </div>

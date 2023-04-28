@@ -15,6 +15,7 @@ function Header() {
         src={headerImgR}
         alt="pokeball"
       />
+      <div className="header-wallpaper" />
     </div>
   );
 }
