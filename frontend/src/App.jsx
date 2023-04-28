@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Comparator from "./components/Comparator";
 import SlideFilters from "./components/SlideFiltersMobile/SlideFilters";
 import SlideButton from "./components/SlideFiltersMobile/SlideButton";
 import Deck from "./components/Deck/Deck";
@@ -33,6 +34,7 @@ function App() {
   const [selectedType, setSelectedType] = useState("");
   const [selectedHeight, setSelectedHeight] = useState("");
   const [selectedPoids, setSelectedPoids] = useState("");
+  const [test, setTest] = useState(false);
   const [slideIsOpened, setSlideIsOpened] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [toggleFilterPl, setToggleFilterPl] = useState(true);
@@ -54,10 +56,28 @@ function App() {
   const handleFilterPl = () => {
     setToggleFilterPl((current) => !current);
   };
-
+  if (test === true) {
+    return (
+      <div>
+        <Header test={test} setTest={setTest} />
+        <section id="main-section-2">
+          <Comparator />
+          <Deck
+            pokemon={pokemon}
+            selectedType={selectedType}
+            selectedHeight={selectedHeight}
+            setSelectedType={setSelectedType}
+            selectedPoids={selectedPoids}
+            setSelectedPoids={setSelectedPoids}
+            test={test}
+          />
+        </section>
+      </div>
+    );
+  }
   return (
     <div>
-      <Header />
+      <Header test={test} setTest={setTest} />
       <section id="main-section">
         <SlideFilters
           slideIsOpened={slideIsOpened}
@@ -113,11 +133,11 @@ function App() {
           setSelectedType={setSelectedType}
           selectedPoids={selectedPoids}
           setSelectedPoids={setSelectedPoids}
+          test={test}
           isClicked={isClicked}
         />
       </section>
     </div>
   );
 }
-
 export default App;

@@ -6,8 +6,6 @@
   overflow-y: scroll;
   width: 70%;
   height: 75vh;
-  right: 5%;
-  bottom: 5%;
   box-shadow: -8px 0 0 0 $border-color, 8px 0 0 0 $border-color,
     0 -8px 0 0 $border-color, 0 8px 0 0 $border-color;
   background-color: $secondary-color;
@@ -29,6 +27,15 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+}
+
+.compareDeck {
+  height: 50vh;
+  width: 90%;
+}
+
+.comparePokemonList {
+  width: 95%;
 }
 
 @media screen and (max-width: 820px) {

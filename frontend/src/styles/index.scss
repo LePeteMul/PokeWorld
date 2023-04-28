@@ -8,3 +8,14 @@
 @import "./landingPage";
 @import "./slideFilters";
 @import "./playlist";
+@import "./cardsCompare";
+@import "./MyDeck/myDeckContainer";
+@import "./MyDeck/myDeck";
+@import "./MyDeck/introMyDeck";
+@import "./MyDeck/favCard";
+
+* {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Courier New", Courier, monospace;
+}
