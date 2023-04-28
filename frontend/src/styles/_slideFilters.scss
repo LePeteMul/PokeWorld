@@ -13,7 +13,6 @@
   overflow: scroll;
   z-index: 2;
   display: none;
-  
 }
 
 #pokeball-button-box {
@@ -54,8 +53,8 @@
   .filtre-box {
     width: 80%;
   }
-  .fav-input-text, .slide-filtres-title {
-    
+  .fav-input-text,
+  .slide-filtres-title {
     color: white;
     font-family: $main-font-family;
     text-shadow: 0px 0px 20px #000000;
@@ -66,16 +65,15 @@
 }
 
 .fav-box {
-    width: 80%;
-    display: flex;
-    gap: 5%;
-    padding-bottom: 5vh;
+  width: 80%;
+  display: flex;
+  gap: 5%;
+  padding-bottom: 5vh;
 
-    #fav-input {
-        box-shadow: -2px 0 0 0 $border-color, 2px 0 0 0 $border-color,
-        0 -2px 0 0 $border-color, 0 2px 0 0 $border-color;
-
-    }
+  #fav-input {
+    box-shadow: -2px 0 0 0 $border-color, 2px 0 0 0 $border-color,
+      0 -2px 0 0 $border-color, 0 2px 0 0 $border-color;
+  }
 }
 
 #pokeball-button-box.hide {
@@ -87,10 +85,10 @@
 }
 
 .slide-filters-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 820px) {

@@ -8,7 +8,7 @@ function MyDeckContainer({ favPokemon }) {
     <div className="MyDeckContainer">
       <div className="favPokeList">
         {favPokemon.map((poke) => (
-          <div key={poke.data.id}>
+          <div key={poke.data.id} className="cardFav">
             <FavCard index={poke.data.id} />
           </div>
         ))}

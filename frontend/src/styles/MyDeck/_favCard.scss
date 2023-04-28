@@ -1,1 +1,17 @@
 @import "../config.scss";
+
+.FavCard {
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+  flex-wrap: wrap;
+  transform: scale(0.7);
+
+  &:hover {
+    transform: scale(0.9);
+    z-index: 2;
+  }
+}
