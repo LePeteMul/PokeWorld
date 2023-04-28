@@ -40,12 +40,14 @@ function Header({ test, setTest }) {
         Sélecteur / Comparateur{" "}
       </button>
 
-      <img
-        className="rotate-center"
-        id="pokeball"
-        src={headerImgR}
-        alt="pokeball"
-      />
+      <a href="https://www.youtube.com/watch?v=KKhpQmaia4w&ab_channel=youpeKaraok%C3%A9">
+        <img
+          className="rotate-center"
+          id="pokeball"
+          src={headerImgR}
+          alt="pokeball"
+        />
+      </a>
     </div>
   );
 }
