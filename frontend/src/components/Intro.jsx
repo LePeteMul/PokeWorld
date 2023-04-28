@@ -9,8 +9,8 @@ function Intro() {
         Here, you can <span className="intro-bold-words">search</span>,{" "}
         <span className="intro-bold-words">compare</span> and{" "}
         <span className="intro-bold-words">build </span>your own deck
-        <span className="intro-bold-words">battle</span> with your favorite
-        first generation pokemon !
+        <span className="intro-bold-words"> battle</span> with your favorite
+        first generation pokemon!
       </p>
       <nav className="navBar">
         <ul>

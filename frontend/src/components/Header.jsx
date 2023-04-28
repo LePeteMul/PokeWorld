@@ -35,8 +35,6 @@ function Header({ test, setTest }) {
           <img className="speaker-img" src={speaker} alt="" />
         )}
       </button>
-
-
       <img id="logo" src={headerImgC} alt="logo-pokemon" />
       <button onClick={handleToggleTest} type="button" className="togglebutton">
         Sélecteur / Comparateur{" "}
