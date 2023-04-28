@@ -1,13 +1,13 @@
 @import "./config.scss";
 @import "./deck";
 @import "./filtres";
-@import "./filtreType";
 @import "./intro";
 @import "./header";
 @import "./decklist";
 @import "./cards";
 @import "./landingPage";
 @import "./slideFilters";
+@import "./playlist";
 @import "./cardsCompare";
 @import "./MyDeck/myDeckContainer";
 @import "./MyDeck/myDeck";
@@ -19,4 +19,3 @@
   list-style: none;
   font-family: "Courier New", Courier, monospace;
 }
-

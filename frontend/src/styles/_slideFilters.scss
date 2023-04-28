@@ -10,7 +10,6 @@
   top: 0;
   left: 0;
   transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
-  overflow: scroll;
   z-index: 2;
   display: none;
 }
@@ -62,6 +61,13 @@
   .slide-filtres-title {
     padding-top: 5vh;
   }
+  .landscape-gif-box {
+    display: initial;
+    top: 40vh;
+    left: 10%;
+    width: 60%;
+    height: 29%;
+  }
 }
 
 .fav-box {
@@ -89,6 +95,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 2rem;
 }
 
 @media screen and (max-width: 820px) {

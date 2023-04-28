@@ -1,9 +1,38 @@
+.landscape-gif-box, .filtres-box {
+  font-family: $main-font-family;
+  box-shadow: $pixel-box-shadow;
+  width: 100%;
+  max-height: 25vh;
+  margin-top: 1rem;
+}
+
 #intro-filtres-box {
   background-color: $primary-color;
   max-width: 23%;
   left: 2%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-family: $main-font-family;
+
+  .fl-pl-button-box {
+    background-color: $secondary-color;
+    box-shadow: -2px 0 0 0 $border-color, 2px 0 0 0 $border-color,
+    0 -2px 0 0 $border-color, 0 2px 0 0 $border-color;;
+    width: 40%;
+    padding: 5px 130px 5px 5px;
+    text-align: center;
+    :hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    .fl-pl-button {
+      font-family: $main-font-family;
+      font-weight: bold;
+      font-size: clamp(0.8rem, 0.8vw, 1rem);
+    }
+  }
 
   .intro-box {
     padding: 20px;

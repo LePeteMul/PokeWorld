@@ -1,0 +1,26 @@
+.landscape-gif-box {
+    background-image: url(../assets/images/pokemonlandscape.gif);
+    background-size: cover;
+    overflow: scroll;
+    .audio-controls {
+      width: 100%;
+    }
+    .playlists {
+      list-style-type: none;
+      background-color: #7f7f7f7a;
+      padding-left: 0.5rem;
+      padding-top: 5px;
+      line-height: 1.5;
+      .playlist-button {
+        font-family: $main-font-family;
+        font-size: clamp(1rem, 1vw, 1.5rem);
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        text-shadow: 5px 5px 5px #7f7f7f;
+      }
+      .playlist-button:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
