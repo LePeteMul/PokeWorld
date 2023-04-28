@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Filtres from "./components/filters/Filtres";
 import "./styles/_app.scss";
+import Playlist from "./components/Playlist";
 /* import { useEffect } from "react"; */
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
   const [selectedPoids, setSelectedPoids] = useState("");
   const [slideIsOpened, setSlideIsOpened] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [toggleFilterPl, setToggleFilterPl] = useState(true);
 
   function getPokemon() {
     const allPokemon = [];
@@ -48,6 +50,10 @@ function App() {
   useEffect(() => {
     getPokemon();
   }, []);
+
+  const handleFilterPl = () => {
+    setToggleFilterPl((current) => !current);
+  };
 
   return (
     <div>
@@ -74,18 +80,27 @@ function App() {
         <div id="intro-filtres-box">
           <Intro />
           <br />
-          <Filtres
-            pokemon={pokemon}
-            selectedType={selectedType}
-            setSelectedType={setSelectedType}
-            selectedPoids={selectedPoids}
-            setSelectedPoids={setSelectedPoids}
-            typesList={typesList}
-            selectedHeight={selectedHeight}
-            setSelectedHeight={setSelectedHeight}
-            isClicked={isClicked}
-            setIsClicked={setIsClicked}
-          />
+          <div className="fl-pl-toggle-button">
+            <button type="button" onClick={handleFilterPl}>
+              Filters/Playlist
+            </button>
+          </div>
+          {toggleFilterPl ? (
+            <Filtres
+              pokemon={pokemon}
+              selectedType={selectedType}
+              setSelectedType={setSelectedType}
+              selectedPoids={selectedPoids}
+              setSelectedPoids={setSelectedPoids}
+              typesList={typesList}
+              selectedHeight={selectedHeight}
+              setSelectedHeight={setSelectedHeight}
+              isClicked={isClicked}
+              setIsClicked={setIsClicked}
+            />
+          ) : (
+            <Playlist />
+          )}
         </div>
         <Deck
           pokemon={pokemon}

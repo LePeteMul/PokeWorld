@@ -1,14 +1,8 @@
 .landscape-gif-box {
     background-image: url(../assets/images/pokemonlandscape.gif);
     background-size: cover;
-    box-shadow: -4px 0 0 0 $border-color, 4px 0 0 0 $border-color,
-      0 -4px 0 0 $border-color, 0 4px 0 0 $border-color;
-    position: fixed;
-    top: 0;
-    left: 20%;
-    height: 13%;
-    width: 20%;
     overflow: scroll;
+    position: relative;
     .audio-controls {
       width: 100%;
     }
@@ -26,12 +20,14 @@
       }
       .playlist-button:hover {
         text-decoration: underline;
+        cursor: pointer;
       }
     }
   }
 
   @media screen and (max-width: 820px) {
     .landscape-gif-box {
+      position: fixed;
       display: none;
     }
     
