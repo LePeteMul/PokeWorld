@@ -8,6 +8,7 @@ export default function Deck({
   selectedType,
   selectedPoids,
   selectedHeight,
+  test,
   isClicked,
 }) {
   const [search, setSearch] = useState("");
@@ -59,11 +60,15 @@ export default function Deck({
   }, [pokemon, selectedType, selectedPoids, selectedHeight, isClicked]);
 
   return (
-    <div className="Deck">
+    <div className={test === true ? "Deck compareDeck" : "Deck"}>
       <div className="deckList">
         <SearchBar handleSearchChange={handleSearchChange} />
 
-        <div className="pokemonList">
+        <div
+          className={
+            test === true ? "pokemonList comparePokemonList" : "pokemonList"
+          }
+        >
           {isFiltered.map((poke) => (
             <div key={poke.data.id}>
               <DeckList
@@ -73,6 +78,7 @@ export default function Deck({
                 type={poke.data.types[0].type.name}
                 height={poke.data.height}
                 weight={poke.data.weight}
+                test={test}
               />
             </div>
           ))}
@@ -86,5 +92,6 @@ Deck.propTypes = {
   selectedPoids: PropTypes.string.isRequired,
   selectedType: PropTypes.string.isRequired,
   selectedHeight: PropTypes.string.isRequired,
+  test: PropTypes.bool.isRequired,
   isClicked: PropTypes.arrayOf.isRequired,
 };
