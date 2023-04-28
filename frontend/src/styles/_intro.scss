@@ -1,4 +1,5 @@
-.landscape-gif-box, .filtres-box {
+.landscape-gif-box,
+.filtres-box {
   font-family: $main-font-family;
   box-shadow: $pixel-box-shadow;
   width: 100%;
@@ -19,7 +20,7 @@
   .fl-pl-button-box {
     background-color: $secondary-color;
     box-shadow: -2px 0 0 0 $border-color, 2px 0 0 0 $border-color,
-    0 -2px 0 0 $border-color, 0 2px 0 0 $border-color;;
+      0 -2px 0 0 $border-color, 0 2px 0 0 $border-color;
     width: 40%;
     padding: 5px 130px 5px 5px;
     text-align: center;
