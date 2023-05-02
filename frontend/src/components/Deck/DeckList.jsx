@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as React from "react";
 import PropTypes from "prop-types";
-import CardsCompare from "@components/CardsCompare";
+import CardsCompare from "../CardsCompare";
 import Cards from "../Cards";
 
 export default function DeckList({ name, image, id, test }) {

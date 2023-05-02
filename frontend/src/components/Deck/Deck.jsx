@@ -20,14 +20,6 @@ export default function Deck({
   };
 
   useEffect(() => {
-    const filteredPokemon2 = pokemon.filter((el) =>
-      el.data.name.toLowerCase().includes(search.toLowerCase())
-    );
-
-    setIsFiltered(filteredPokemon2);
-  }, [search, pokemon]);
-
-  useEffect(() => {
     const filteredPokemon = pokemon
       .filter(
         (el) =>
@@ -54,10 +46,13 @@ export default function Deck({
 
       .filter((el) =>
         isClicked ? favoriteArray.indexOf(el.data.id) !== -1 : el
-      );
+      )
 
+      .filter((el) =>
+        el.data.name.toLowerCase().includes(search.toLowerCase())
+      );
     setIsFiltered(filteredPokemon);
-  }, [pokemon, selectedType, selectedPoids, selectedHeight, isClicked]);
+  }, [pokemon, selectedType, selectedPoids, selectedHeight, isClicked, search]);
 
   return (
     <div className={test === true ? "Deck compareDeck" : "Deck"}>
