@@ -1,10 +1,10 @@
 import React from "react";
-import "../../styles/MyDeck/_introMyDeck.scss";
 import { Link } from "react-router-dom";
+import "../../styles/MyDeck/_introMyDeck.scss";
 
-function IntroMyDeck() {
+function IntroComparator() {
   return (
-    <div className="IntroMyDeck">
+    <div className="IntroMyDeck ">
       <div className="intro-box">
         <h1 className="intro-title">Welcome to your customized Deck!</h1>
         <br />
@@ -34,4 +34,4 @@ function IntroMyDeck() {
   );
 }
 
-export default IntroMyDeck;
+export default IntroComparator;
