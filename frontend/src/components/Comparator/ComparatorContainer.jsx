@@ -25,19 +25,24 @@ function ComparatorContainer() {
       .catch((err) => console.warn(err));
   }, []);
 
-  function getPokemons() {
-    const result1 = axios.get(`https://pokeapi.co/api/v2/pokemon/${name1}`);
+  async function getPokemons() {
+    const result1 = await axios.get(
+      `https://pokeapi.co/api/v2/pokemon/${name1}`
+    );
     setPokStats1(result1.data);
-    const result2 = axios.get(`https://pokeapi.co/api/v2/pokemon/${name2}`);
+    const result2 = await axios.get(
+      `https://pokeapi.co/api/v2/pokemon/${name2}`
+    );
     setPokStats2(result2.data);
     setLoaded(true);
   }
-  const onChange1 = (name) => {
-    console.warn(name);
-    setPokname1(name);
+  const onChange1 = (e) => {
+    console.warn(e.target.value);
+    setPokname1(e.target.value.toString());
   };
-  const onChange2 = (name) => {
-    setPokname2(name);
+  console.warn(name1);
+  const onChange2 = (e) => {
+    setPokname2(e.target.value.toString());
   };
   const onSubmit = (e) => {
     e.preventDefault();

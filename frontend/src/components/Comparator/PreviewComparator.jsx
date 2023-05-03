@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function PreviewComparator({ pokemon1, pokemon2 }) {
+  console.warn(pokemon1);
+  console.warn(pokemon2);
+
   return (
     <div className="preview">
       <div>
@@ -17,12 +20,7 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
         <h4>S-Defense</h4>
         <h4>Speed</h4>
       </div>
-      <div>
-        <h4>{pokemon1.name}</h4>
-      </div>
-      <div>
-        <h4>{pokemon2.name}</h4>
-      </div>
+      <div>{pokemon1.name}</div>
     </div>
   );
 }

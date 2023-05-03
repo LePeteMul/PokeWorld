@@ -7,11 +7,7 @@ function SearchSelector({ onChange1, onChange2, onSubmit, options }) {
     <div>
       <form onSubmit={onSubmit}>
         <div className="holders">
-          <select
-            className="select-search"
-            placeholder="select your first pokemon"
-            onChange={onChange1}
-          >
+          <select className="select-search" onChange={onChange1}>
             <option value="">-- First Pokemon --</option>
             {options.map((poke) => (
               <option key={poke.id}>{poke.name}</option>
@@ -20,11 +16,7 @@ function SearchSelector({ onChange1, onChange2, onSubmit, options }) {
           <button type="submit" className="comparebtn">
             Compare
           </button>
-          <select
-            className="select-search"
-            placeholder="select your second pokemon"
-            onChange={onChange2}
-          >
+          <select className="select-search" onChange={onChange2}>
             <option value="">-- Second Pokemon --</option>
             {options.map((poke) => (
               <option key={poke.id}>{poke.name}</option>
