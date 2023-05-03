@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import BurgerMenu from "./BurgerMenu";
 import headerImgL from "../assets/images/pikachu_pix.gif";
 import headerImgC from "../assets/images/pokemon-logo-1.png";
-import headerImgR from "../assets/images/pokeball_pix.png";
+// import headerImgR from "../assets/images/pokeball_pix.png";
 
 function Header({ test, setTest }) {
   const handleToggleTest = () => {
@@ -16,13 +17,13 @@ function Header({ test, setTest }) {
       <button onClick={handleToggleTest} type="button" className="togglebutton">
         Sélecteur / Comparateur{" "}
       </button>
-
-      <img
+      <BurgerMenu />
+      {/* <img
         className="rotate-center"
         id="pokeball"
         src={headerImgR}
         alt="pokeball"
-      />
+  /> */}
       <div className="header-wallpaper" />
     </div>
   );
