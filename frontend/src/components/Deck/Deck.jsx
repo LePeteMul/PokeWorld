@@ -83,7 +83,7 @@ export default function Deck({
   );
 }
 Deck.propTypes = {
-  pokemon: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
+  pokemon:  
   selectedPoids: PropTypes.string.isRequired,
   selectedType: PropTypes.string.isRequired,
   selectedHeight: PropTypes.string.isRequired,
