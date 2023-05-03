@@ -29,6 +29,9 @@ function BurgerMenu() {
           <li>
             <Link to="/PlaylistPage">Playlist</Link>
           </li>
+          <li>
+            <Link to="/Comparator">Comparator</Link>
+          </li>
         </ul>
       </nav>
       <div className="burger-box">
