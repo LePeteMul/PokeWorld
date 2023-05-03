@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage";
 import App from "../App";
 import MyDeck from "./MyDeck/MyDeck";
-import Comparator from "./Comparator";
+import Comparator from "./Comparator/Comparator";
 
 function Navlinks() {
   return (
