@@ -7,7 +7,6 @@ function BurgerMenu() {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const handleBurger = () => {
     setBurgerOpen(!burgerOpen);
-    console.info(burgerOpen);
   };
 
   let menuVisible = "hide";

@@ -1,13 +1,52 @@
+.playlist-page {
+  background-color: $primary-color;
+  display: flex;
+}
+
+.intro-playlist-box {
+  padding: 20px;
+  box-shadow: $pixel-box-shadow;
+  font-family: $main-font-family;
+  background-color: $secondary-color;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  line-height: 1.5;
+  max-width: 23%;
+  max-height: 30vh;
+  margin-left: 5%;
+
+  .intro-playlist-title {
+    font-weight: bold;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    line-height: 1;
+  }
+
+  .intro-bold-words {
+    font-weight: bold;
+  }
+}
+
 .landscape-gif-box {
-  background-image: url(../assets/images/pokemonlandscape.gif);
-  background-size: cover;
+  box-shadow: $pixel-box-shadow;
   overflow: scroll;
+  height: 50vh;
+  width: 60%;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   .audio-controls {
     width: 100%;
   }
+
   .playlists {
+    height: 100%;
+    width: 30%;
+    background-color: #ffffff7d;
+    
+  }
+
+  .playlist {
     list-style-type: none;
-    background-color: #7f7f7f7a;
     padding-left: 0.5rem;
     padding-top: 5px;
     line-height: 1.5;
@@ -22,5 +61,11 @@
       text-decoration: underline;
       cursor: pointer;
     }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .intro-playlist-box {
+    display: none;
   }
 }
