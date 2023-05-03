@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage";
 import App from "../App";
 import MyDeck from "./MyDeck/MyDeck";
+import PlaylistPage from "./Playlist/PlaylistPage";
 import Comparator from "./Comparator/Comparator";
 
 function Navlinks() {
@@ -11,6 +12,7 @@ function Navlinks() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/AppPokeworld" element={<App />} />
       <Route path="/MyDeck" element={<MyDeck />} />
+      <Route path="/PlaylistPage" element={<PlaylistPage />} />
       <Route path="/Comparator" element={<Comparator />} />
     </Routes>
   );

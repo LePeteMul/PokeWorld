@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import Filtres from "../filters/Filtres";
-import Playlist from "../Playlist";
 
 function SlideFilters({
   slideIsOpened,
@@ -37,7 +36,6 @@ function SlideFilters({
           isClicked={isClicked}
           setIsClicked={setIsClicked}
         />
-        <Playlist />
       </div>
     </div>
   );

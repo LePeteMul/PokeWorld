@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 function Intro() {
   return (
     <div className="intro-box">
@@ -11,19 +9,6 @@ function Intro() {
         <span className="intro-bold-words">build </span>your own deck with your
         favorite first generation pokemon!
       </p>
-      <nav className="navBar">
-        <ul>
-          <li>
-            <Link to="/AppPokeworld">Home</Link>
-          </li>
-          <li>
-            <Link to="/MyDeck">My Deck</Link>
-          </li>
-          <li>
-            <Link to="/Comparator">Comparator</Link>
-          </li>
-        </ul>
-      </nav>
     </div>
   );
 }
