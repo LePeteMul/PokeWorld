@@ -14,16 +14,6 @@
   margin: 20px;
 }
 
-#comparator {
-  background-color: rgb(94, 186, 189);
-  font-size: x-large;
-  padding: 50px;
-  width: 90%;
-  height: 30vh;
-  box-shadow: -8px 0 0 0 $border-color, 8px 0 0 0 $border-color,
-    0 -8px 0 0 $border-color, 0 8px 0 0 $border-color;
-}
-
 .togglebutton {
   font-family: $main-font-family;
   border-color: $border-color;

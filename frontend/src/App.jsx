@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Comparator from "./components/Comparator";
+import Comparator from "./components/Comparator/Comparator";
 import SlideFilters from "./components/SlideFiltersMobile/SlideFilters";
 import SlideButton from "./components/SlideFiltersMobile/SlideButton";
 import Deck from "./components/Deck/Deck";
