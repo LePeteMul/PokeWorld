@@ -4,18 +4,18 @@ import pokeballMenuTop from "../assets/images/pokeball_Top.png";
 import pokeballMenuBottom from "../assets/images/pokeball_Bottom.png";
 
 function BurgerMenu() {
-  const [burgerOpen, setBurgerOpen] = useState(false);
+  const [burgerOpen, setBurgerOpen] = useState(true);
+  const [menuVisible, setMenuVisible] = useState("");
   const handleBurger = () => {
     setBurgerOpen(!burgerOpen);
-    console.info(burgerOpen);
+
+    if (burgerOpen) {
+      setMenuVisible("show");
+    } else {
+      setMenuVisible("hide");
+    }
   };
 
-  let menuVisible = "hide";
-  if (burgerOpen) {
-    menuVisible = "show";
-  } else {
-    menuVisible = "hide";
-  }
   return (
     <>
       <nav id="navBar" className={menuVisible}>
