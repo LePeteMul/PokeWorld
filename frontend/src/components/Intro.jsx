@@ -19,6 +19,9 @@ function Intro() {
           <li>
             <Link to="/MyDeck">My Deck</Link>
           </li>
+          <li>
+            <Link to="/Comparator">Comparator</Link>
+          </li>
         </ul>
       </nav>
     </div>
