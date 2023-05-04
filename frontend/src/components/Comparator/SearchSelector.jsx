@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function SearchSelector({ onChange1, onChange2, onSubmit, options }) {
   return (
-    <div>
+    <div className="SearchSelector">
       <form onSubmit={onSubmit}>
         <div className="holders">
           <select className="select-search" onChange={onChange1}>

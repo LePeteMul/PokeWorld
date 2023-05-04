@@ -19,5 +19,84 @@
   .pokeball-menu-bottom {
     width: 6rem;
     height: 3rem;
+
+.burger-box {
+  padding-right: 2%;
+}
+.burger-box-button {
+  display: flex;
+  flex-direction: column;
+  .pokeball-menu-top,
+  .pokeball-menu-bottom {
+    width: 6rem;
+    height: 3rem;
+  }
+}
+
+#navBar {
+  display: flex;
+  position: fixed;
+  background-color: $primary-color;
+  border-radius: 4px;
+  opacity: 75%;
+  font-weight: bold;
+  padding: 4px;
+  right: -200px;
+  display: flex;
+  animation: slideMenuLeft 1s;
+  right: 135px;
+}
+
+@keyframes slideMenuLeft {
+  from {
+    right: -200px;
+  }
+  to {
+    right: 135px;
+  }
+}
+
+@keyframes slideMenuDown {
+  from {
+    top: -1000px;
+  }
+  to {
+    top: 70px;
+  }
+}
+@keyframes slideMenuUp {
+  from {
+    top: 70px;
+  }
+  to {
+    top: -1000px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  #navBar {
+    z-index: 2;
+    display: flex;
+    background-color: $primary-color;
+    border-radius: 4px;
+    opacity: 90%;
+    font-weight: bold;
+    padding: 4px;
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    line-height: 90px;
+    box-shadow: $pixel-box-shadow;
+    top: -1000px;
+  }
+  #navBar.hide {
+    animation: slideMenuUp 1s;
+    right: 10%;
+  }
+  #navBar.show {
+    animation: slideMenuDown 1s;
+    top: 70px;
+    right: 10%;
   }
 }

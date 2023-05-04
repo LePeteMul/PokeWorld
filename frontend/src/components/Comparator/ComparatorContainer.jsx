@@ -54,7 +54,6 @@ function ComparatorContainer() {
   if (loaded) {
     return (
       <div className="MyDeckContainer">
-        <h2>Pokemon Comparator</h2>
         <SearchSelector
           onChange1={onChange1}
           onChange2={onChange2}
@@ -70,7 +69,6 @@ function ComparatorContainer() {
   }
   return (
     <div className="MyDeckContainer">
-      <h2>Pokemon Comparator</h2>
       <SearchSelector
         onChange1={onChange1}
         onChange2={onChange2}
