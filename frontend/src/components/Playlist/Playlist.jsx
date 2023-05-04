@@ -93,6 +93,11 @@ function Playlist() {
       musicSrc: audio13,
       musicBg: background13,
     },
+    {
+      musicName: "???",
+      musicSrc: "",
+      musicBg: "",
+    },
   ];
 
   const [selectedMusic, setSelectedMusic] = useState(playList[0].musicSrc);
@@ -103,10 +108,32 @@ function Playlist() {
     console.info(selectedMusic);
   }
   return (
-    <div
-      className="playlist-box"
-      style={{ backgroundImage: `url(${selectedBg})` }}
-    >
+    <div className="playlist-container">
+      <div
+        className="playlist-box"
+        style={{ backgroundImage: `url(${selectedBg})` }}
+      >
+        <div>
+          <h2 className="playlist-title">Choose your music :</h2>
+          <ul className="playlists">
+            {playList.map((music) => {
+              return (
+                <li className="playlist" key={music}>
+                  <button
+                    type="button"
+                    onClick={(e) => handleMusic(e)}
+                    name={music.musicBg}
+                    value={music.musicSrc}
+                    className="playlist-button"
+                  >
+                    {music.musicName}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
       <audio
         className="audio-controls"
         src={selectedMusic}
@@ -116,23 +143,6 @@ function Playlist() {
       >
         <track kind="captions" />
       </audio>
-      <ul className="playlists">
-        {playList.map((music) => {
-          return (
-            <li className="playlist" key={music}>
-              <button
-                type="button"
-                onClick={(e) => handleMusic(e)}
-                name={music.musicBg}
-                value={music.musicSrc}
-                className="playlist-button"
-              >
-                {music.musicName}
-              </button>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 }
