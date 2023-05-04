@@ -20,25 +20,23 @@
     max-width: 100%;
     max-height: 30vh;
     margin-left: 5%;
-  
+
     .intro-playlist-title {
       font-weight: bold;
       font-size: clamp(1.2rem, 2vw, 2rem);
       line-height: 1;
     }
-  
+
     .intro-bold-words {
       font-weight: bold;
     }
   }
-  
+
   .vaporeon {
     width: 18rem;
     height: 18rem;
   }
 }
-
-
 
 .playlist-container {
   width: 90%;
