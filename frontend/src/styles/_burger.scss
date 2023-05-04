@@ -1,23 +1,23 @@
 #navBar.hide {
-    display: none;
+  display: none;
 }
 
 #navBar.show {
-    display: flex;
-    position: fixed;
-    left: 70%;
+  display: flex;
+  position: fixed;
+  left: 70%;
 }
 
 .burger-box {
-    padding-right: 2%;
+  padding-right: 2%;
 }
 .burger-box-button {
-    display: flex;
-    flex-direction: column;
-    
-    .pokeball-menu-top, .pokeball-menu-bottom {
-        width: 6rem;
-        height: 3rem;
-    }
-}
+  display: flex;
+  flex-direction: column;
 
+  .pokeball-menu-top,
+  .pokeball-menu-bottom {
+    width: 6rem;
+    height: 3rem;
+  }
+}
