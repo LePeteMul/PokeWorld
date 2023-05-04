@@ -14,11 +14,13 @@
 .burger-box-button {
   display: flex;
   flex-direction: column;
+}
 
-  .pokeball-menu-top,
-  .pokeball-menu-bottom {
-    width: 6rem;
-    height: 3rem;
+.pokeball-menu-top,
+.pokeball-menu-bottom {
+  width: 6rem;
+  height: 3rem;
+}
 
 .burger-box {
   padding-right: 2%;

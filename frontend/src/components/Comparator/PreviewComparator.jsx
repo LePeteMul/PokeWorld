@@ -30,44 +30,193 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
       }
       if (
         (type1 === "fire" &&
-          ["water", "rock", "ground", "ice", "bug", "grass"].indexOf(type2)) ||
-        (type1 === "bug" && ["fire", "grass", "psychic"].indexOf(type2)) ||
-        (type1 === "dragon" && ["fairy", "ice", "electric"].indexOf(type2)) ||
-        (type1 === "electric" &&
-          ["dragon", "ground", "water"].indexOf(type2)) ||
-        (type1 === "fairy" &&
-          ["poison", "fighting", "dragon"].indexOf(type2)) ||
-        (type1 === "fighting" &&
-          ["fairy", "psychic", "ice", "normal", "rock"].indexOf(type2)) ||
-        (type1 === "grass" &&
-          ["fire", "ice", "poison", "bug", "water", "ground", "rock"].indexOf(
-            type2
-          )) ||
-        (type1 === "ground" &&
+          [
+            "dragon",
+            "electric",
+            "fairy",
+            "fighting",
+            "normal",
+            "poison",
+            "psychic",
+            "ghost",
+          ].includes(type2)) ||
+        (type1 === "bug" &&
           [
             "water",
-            "grass",
-            "ice",
-            "electric",
-            "fire",
-            "poison",
             "rock",
-          ].indexOf(type2)) ||
+            "ground",
+            "ice",
+            "bug",
+            "dragon",
+            "electric",
+            "fairy",
+            "fighting",
+            "normal",
+            "poison",
+            "ghost",
+          ].includes(type2)) ||
+        (type1 === "dragon" &&
+          [
+            "water",
+            "rock",
+            "ground",
+            "bug",
+            "grass",
+            "dragon",
+            "fighting",
+            "normal",
+            "poison",
+            "psychic",
+            "ghost",
+            "fire",
+          ].includes(type2)) ||
+        (type1 === "electric" &&
+          [
+            "rock",
+            "ice",
+            "bug",
+            "grass",
+            "electric",
+            "fairy",
+            "fighting",
+            "normal",
+            "poison",
+            "psychic",
+            "ghost",
+            "fire",
+          ].includes(type2)) ||
+        (type1 === "fairy" &&
+          [
+            "water",
+            "rock",
+            "ground",
+            "ice",
+            "bug",
+            "grass",
+            "electric",
+            "fairy",
+            "normal",
+            "psychic",
+            "ghost",
+            "fire",
+          ].includes(type2)) ||
+        (type1 === "fighting" &&
+          [
+            "water",
+            "ground",
+            "bug",
+            "grass",
+            "dragon",
+            "electric",
+            "fighting",
+            "poison",
+            "ghost",
+            "fire",
+          ].includes(type2)) ||
+        (type1 === "grass" &&
+          [
+            "grass",
+            "dragon",
+            "electric",
+            "fairy",
+            "fighting",
+            "normal",
+            "psychic",
+            "ghost",
+          ].includes(type2)) ||
+        (type1 === "ground" &&
+          [
+            "ground",
+            "bug",
+            "dragon",
+            "fairy",
+            "fighting",
+            "normal",
+            "psychic",
+            "ghost",
+          ].includes(type2)) ||
         (type1 === "ice" &&
-          ["fighting", "fire", "rock", "dragon", "grass", "ground"].indexOf(
-            type2
-          )) ||
-        (type1 === "normal" && type2 !== "fighting") ||
+          [
+            "water",
+            "ice",
+            "bug",
+            "electric",
+            "fairy",
+            "normal",
+            "poison",
+            "psychic",
+            "ghost",
+          ].includes(type2)) ||
+        (type1 === "normal" &&
+          [
+            "water",
+            "rock",
+            "ground",
+            "ice",
+            "bug",
+            "grass",
+            "dragon",
+            "electric",
+            "fairy",
+            "normal",
+            "poison",
+            "psychic",
+            "ghost",
+            "fire",
+          ].includes(type2)) ||
         (type1 === "poison" &&
-          ["ground", "psychic", "fairy", "grass"].indexOf(type2)) ||
+          [
+            "water",
+            "rock",
+            "ice",
+            "bug",
+            "dragon",
+            "electric",
+            "fighting",
+            "normal",
+            "poison",
+            "ghost",
+            "fire",
+          ].includes(type2)) ||
         (type1 === "psychic" &&
-          ["bug", "ghost", "fighting", "poison"].indexOf(type2)) ||
+          [
+            "water",
+            "rock",
+            "ground",
+            "ice",
+            "grass",
+            "dragon",
+            "electric",
+            "fairy",
+            "normal",
+            "psychic",
+            "fire",
+          ].includes(type2)) ||
         (type1 === "rock" &&
-          ["fighting", "water", "grass", "ground", "fire", "ice"].indexOf(
-            type2
-          )) ||
+          [
+            "rock",
+            "bug",
+            "dragon",
+            "electric",
+            "fairy",
+            "normal",
+            "poison",
+            "psychic",
+            "ghost",
+          ].includes(type2)) ||
         (type1 === "water" &&
-          ["electric", "grass", "fire", "ground", "rock"].indexOf(type2))
+          [
+            "water",
+            "ice",
+            "bug",
+            "dragon",
+            "fairy",
+            "fighting",
+            "normal",
+            "poison",
+            "psychic",
+            "ghost",
+          ].includes(type2))
       ) {
         return "table blue";
       }
@@ -94,36 +243,193 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
     }
     if (
       (type1 === "fire" &&
-        ["water", "rock", "ground", "ice", "bug", "grass"].indexOf(type2)) ||
-      (type1 === "bug" && ["fire", "grass", "psychic"].indexOf(type2)) ||
-      (type1 === "dragon" && ["fairy", "ice", "electric"].indexOf(type2)) ||
-      (type1 === "electric" && ["dragon", "ground", "water"].indexOf(type2)) ||
-      (type1 === "fairy" && ["poison", "fighting", "dragon"].indexOf(type2)) ||
+        [
+          "dragon",
+          "electric",
+          "fairy",
+          "fighting",
+          "normal",
+          "poison",
+          "psychic",
+          "ghost",
+        ].includes(type2)) ||
+      (type1 === "bug" &&
+        [
+          "water",
+          "rock",
+          "ground",
+          "ice",
+          "bug",
+          "dragon",
+          "electric",
+          "fairy",
+          "fighting",
+          "normal",
+          "poison",
+          "ghost",
+        ].includes(type2)) ||
+      (type1 === "dragon" &&
+        [
+          "water",
+          "rock",
+          "ground",
+          "bug",
+          "grass",
+          "dragon",
+          "fighting",
+          "normal",
+          "poison",
+          "psychic",
+          "ghost",
+          "fire",
+        ].includes(type2)) ||
+      (type1 === "electric" &&
+        [
+          "rock",
+          "ice",
+          "bug",
+          "grass",
+          "electric",
+          "fairy",
+          "fighting",
+          "normal",
+          "poison",
+          "psychic",
+          "ghost",
+          "fire",
+        ].includes(type2)) ||
+      (type1 === "fairy" &&
+        [
+          "water",
+          "rock",
+          "ground",
+          "ice",
+          "bug",
+          "grass",
+          "electric",
+          "fairy",
+          "normal",
+          "psychic",
+          "ghost",
+          "fire",
+        ].includes(type2)) ||
       (type1 === "fighting" &&
-        ["fairy", "psychic", "ice", "normal", "rock"].indexOf(type2)) ||
+        [
+          "water",
+          "ground",
+          "bug",
+          "grass",
+          "dragon",
+          "electric",
+          "fighting",
+          "poison",
+          "ghost",
+          "fire",
+        ].includes(type2)) ||
       (type1 === "grass" &&
-        ["fire", "ice", "poison", "bug", "water", "ground", "rock"].indexOf(
-          type2
-        )) ||
+        [
+          "grass",
+          "dragon",
+          "electric",
+          "fairy",
+          "fighting",
+          "normal",
+          "psychic",
+          "ghost",
+        ].includes(type2)) ||
       (type1 === "ground" &&
-        ["water", "grass", "ice", "electric", "fire", "poison", "rock"].indexOf(
-          type2
-        )) ||
+        [
+          "ground",
+          "bug",
+          "dragon",
+          "fairy",
+          "fighting",
+          "normal",
+          "psychic",
+          "ghost",
+        ].includes(type2)) ||
       (type1 === "ice" &&
-        ["fighting", "fire", "rock", "dragon", "grass", "ground"].indexOf(
-          type2
-        )) ||
-      (type1 === "normal" && type2 !== "fighting") ||
+        [
+          "water",
+          "ice",
+          "bug",
+          "electric",
+          "fairy",
+          "normal",
+          "poison",
+          "psychic",
+          "ghost",
+        ].includes(type2)) ||
+      (type1 === "normal" &&
+        [
+          "water",
+          "rock",
+          "ground",
+          "ice",
+          "bug",
+          "grass",
+          "dragon",
+          "electric",
+          "fairy",
+          "normal",
+          "poison",
+          "psychic",
+          "ghost",
+          "fire",
+        ].includes(type2)) ||
       (type1 === "poison" &&
-        ["ground", "psychic", "fairy", "grass"].indexOf(type2)) ||
+        [
+          "water",
+          "rock",
+          "ice",
+          "bug",
+          "dragon",
+          "electric",
+          "fighting",
+          "normal",
+          "poison",
+          "ghost",
+          "fire",
+        ].includes(type2)) ||
       (type1 === "psychic" &&
-        ["bug", "ghost", "fighting", "poison"].indexOf(type2)) ||
+        [
+          "water",
+          "rock",
+          "ground",
+          "ice",
+          "grass",
+          "dragon",
+          "electric",
+          "fairy",
+          "normal",
+          "psychic",
+          "fire",
+        ].includes(type2)) ||
       (type1 === "rock" &&
-        ["fighting", "water", "grass", "ground", "fire", "ice"].indexOf(
-          type2
-        )) ||
+        [
+          "rock",
+          "bug",
+          "dragon",
+          "electric",
+          "fairy",
+          "normal",
+          "poison",
+          "psychic",
+          "ghost",
+        ].includes(type2)) ||
       (type1 === "water" &&
-        ["electric", "grass", "fire", "ground", "rock"].indexOf(type2))
+        [
+          "water",
+          "ice",
+          "bug",
+          "dragon",
+          "fairy",
+          "fighting",
+          "normal",
+          "poison",
+          "psychic",
+          "ghost",
+        ].includes(type2))
     ) {
       return "table blue";
     }
