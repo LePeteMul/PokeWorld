@@ -46,7 +46,9 @@ function ComparatorContainer() {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    getPokemons();
+    if (name1 && name2) {
+      getPokemons();
+    }
   };
 
   console.warn(pokStats1);
