@@ -1,38 +1,24 @@
-#navBar.hide {
-  display: none;
-}
-
-#navBar.show {
-  display: flex;
-  position: fixed;
-  left: 70%;
+.burger-box {
+  padding-right: 2%;
 }
 
 .burger-box {
   padding-right: 2%;
 }
+
+  position: absolute;
+  right: 1%;
+  top: 3%;
+}
+
 .burger-box-button {
   display: flex;
   flex-direction: column;
 }
-
-  .pokeball-menu-top,
-  .pokeball-menu-bottom {
-    width: 6rem;
-    height: 3rem;
-  }
-
-.burger-box {
-  padding-right: 2%;
-}
-.burger-box-button {
-  display: flex;
-  flex-direction: column;
-  .pokeball-menu-top,
-  .pokeball-menu-bottom {
-    width: 6rem;
-    height: 3rem;
-  }
+.pokeball-menu-top,
+.pokeball-menu-bottom {
+  width: 6rem;
+  height: 3rem;
 }
 
 #navBar {
@@ -42,11 +28,9 @@
   border-radius: 4px;
   opacity: 75%;
   font-weight: bold;
-  padding: 4px;
-  right: -200px;
-  display: flex;
+  padding: 8px;
   animation: slideMenuLeft 1s;
-  right: 135px;
+  right: 150px;
 }
 
 @keyframes slideMenuLeft {
@@ -63,12 +47,12 @@
     top: -1000px;
   }
   to {
-    top: 70px;
+    top: 100px;
   }
 }
 @keyframes slideMenuUp {
   from {
-    top: 70px;
+    top: 100px;
   }
   to {
     top: -1000px;
@@ -98,7 +82,7 @@
   }
   #navBar.show {
     animation: slideMenuDown 1s;
-    top: 70px;
+    top: 100px;
     right: 10%;
   }
 }
