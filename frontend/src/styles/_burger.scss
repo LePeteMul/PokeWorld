@@ -33,26 +33,18 @@
     right: 135px;
   }
 }
-@keyframes slideMenuRight {
-  from {
-    right: 135px;
-  }
-  to {
-    right: -200px;
-  }
-}
 
 @keyframes slideMenuDown {
   from {
     top: -1000px;
   }
   to {
-    top: 0px;
+    top: 70px;
   }
 }
 @keyframes slideMenuUp {
   from {
-    top: 0px;
+    top: 70px;
   }
   to {
     top: -1000px;
@@ -82,7 +74,7 @@
   }
   #navBar.show {
     animation: slideMenuDown 1s;
-    top: 0px;
+    top: 70px;
     right: 10%;
   }
 }
