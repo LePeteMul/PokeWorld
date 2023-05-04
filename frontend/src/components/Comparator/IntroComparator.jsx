@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../../styles/MyDeck/_introMyDeck.scss";
 
 function IntroComparator() {
@@ -14,21 +13,6 @@ function IntroComparator() {
           With your personalized deck, you're ready to take on any opponents and
           become a true <span className="bold">Pokemon master</span>.
         </p>
-      </div>
-      <div>
-        <nav className="navBar">
-          <ul>
-            <li>
-              <Link to="/AppPokeworld">Home</Link>
-            </li>
-            <li>
-              <Link to="/MyDeck">My Deck</Link>
-            </li>
-            <li>
-              <Link to="/Comparator">Comparator</Link>
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
   );

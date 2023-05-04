@@ -20,13 +20,13 @@
   font-weight: bold;
   padding: 4px;
   right: -200px;
-}
+  // }
 
-#navBar.hide {
-  animation: slideMenuRight 1s;
-}
+  // // #navBar.hide {
+  // //   animation: slideMenuRight 1s;
+  // // }
 
-#navBar.show {
+  // #navBar.show {
   display: flex;
   animation: slideMenuLeft 1s;
   right: 135px;
@@ -76,12 +76,11 @@
     font-weight: bold;
     padding: 4px;
     width: 80%;
-    height: 40%;
+    height: auto;
     justify-content: center;
     align-items: center;
     line-height: 90px;
     box-shadow: $pixel-box-shadow;
-
     top: -1000px;
   }
   #navBar.hide {
