@@ -65,11 +65,13 @@
   .playlist-title {
     background-color: #ffffff7d;
     text-align: center;
+    text-shadow: 5px 5px 5px #7f7f7f;
+    padding: 10px;
   }
 
   .playlists {
     height: 100%;
-    width: 45%;
+    width: 50%;
     font-size: clamp(1rem, 1vw, 1.5rem);
   }
 
