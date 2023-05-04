@@ -1,0 +1,117 @@
+.global-preview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .preview {
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+
+    .table1 {
+      display: flex;
+      width: 20%;
+    }
+
+    .table2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+      height: 30px;
+    }
+
+    .table {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+      height: 30px;
+    }
+
+    .green {
+      background-color: rgb(119, 255, 119);
+    }
+
+    .red {
+      background-color: rgb(255, 53, 53);
+    }
+
+    .blue {
+      background-color: rgb(64, 207, 255);
+    }
+
+    .table-img {
+      width: 20%;
+      height: 150px;
+    }
+
+    .sprites-comparator {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .name-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .type-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .height-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .weight-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .hp-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .attack-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .defense-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .s-attack-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .s-defense-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .speed-comparator {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+  }
+}

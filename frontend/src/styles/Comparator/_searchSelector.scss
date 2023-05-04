@@ -3,6 +3,25 @@
 .holders {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  height: 50px;
+
+  .select-search {
+    width: 250px;
+    position: relative;
+    font-family: "Nunito Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 20px 20px 20px 0px;
+  }
+
+  .comparebtn {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(119, 255, 119);
+  }
+}
+
 }
 
 .select-search {
@@ -24,3 +43,4 @@
       align-items: center;
     }
   }
+

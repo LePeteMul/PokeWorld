@@ -31,16 +31,16 @@ export default function CardsCompare({ index }) {
 
   return (
     <div className="card-compare">
-      <div className="image-compare">
-        <img src={image} alt="card" />
-        <p>{name}</p>
+      <div className="image-name-compare">
+        <img className="img-compare" src={image} alt="card" />
+        <p className="name-compare">{name}</p>
       </div>
-      <div className="stats">
-        <p>Hp = {hp}</p>
-        <p>Type = {type}</p>
-        <p>Attack = {attack}</p>
-        <p>Defense = {defense}</p>
-        <p>Speed = {speed}</p>
+      <div className="stats-compare">
+        <p className="stat-compare">Hp = {hp}</p>
+        <p className="stat-compare">Type = {type}</p>
+        <p className="stat-compare">Attack = {attack}</p>
+        <p className="stat-compare">Defense = {defense}</p>
+        <p className="stat-compare">Speed = {speed}</p>
       </div>
     </div>
   );

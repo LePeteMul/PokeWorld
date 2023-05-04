@@ -1,8 +1,9 @@
 .card-compare {
   display: flex;
   background-color: red;
+  width: 40%;
 
-  .stats {
+  .stats-compare {
     flex-direction: column;
   }
 }
