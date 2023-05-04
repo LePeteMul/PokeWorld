@@ -14,14 +14,14 @@ import audio12 from "../../assets/audio/12-rivalappears.mp3";
 import audio13 from "../../assets/audio/13-pewtercity.mp3";
 import background1 from "../../assets/images/pokemonlandscape.gif";
 import background2 from "../../assets/images/pallettownpicture.png";
-import background3 from "../../assets/images/wildpokemonbattle.jpg";
+import background3 from "../../assets/images/wildpkmnappears.png";
 import background4 from "../../assets/images/pokecenterbg.jpg";
 import background5 from "../../assets/images/gymbg.jpg";
-import background6 from "../../assets/images/gymleaderfightbg.jpeg";
+import background6 from "../../assets/images/gymleaderpicture.png";
 import background7 from "../../assets/images/lavendertownbg.jpg";
 import background8 from "../../assets/images/pokemontowerbg.jpg";
 import background9 from "../../assets/images/roadtoveridianbg.jpg";
-import background10 from "../../assets/images/mountmoonbg.jpg";
+import background10 from "../../assets/images/mountmoonpicture.gif";
 import background11 from "../../assets/images/guidebg.png";
 import background12 from "../../assets/images/rivalappearsbg.jpg";
 import background13 from "../../assets/images/argentabg.png";
@@ -39,7 +39,7 @@ function Playlist() {
       musicBg: background2,
     },
     {
-      musicName: "Battle wild Pokemon",
+      musicName: "Wild Pokemon",
       musicSrc: audio3,
       musicBg: background3,
     },
@@ -54,7 +54,7 @@ function Playlist() {
       musicBg: background5,
     },
     {
-      musicName: "Gym Leader Fight",
+      musicName: "Gym Leader",
       musicSrc: audio6,
       musicBg: background6,
     },
@@ -69,7 +69,7 @@ function Playlist() {
       musicBg: background8,
     },
     {
-      musicName: "Road to Veridian",
+      musicName: "Road",
       musicSrc: audio9,
       musicBg: background9,
     },
@@ -79,7 +79,7 @@ function Playlist() {
       musicBg: background10,
     },
     {
-      musicName: "Let me guide you",
+      musicName: "Guide you",
       musicSrc: audio11,
       musicBg: background11,
     },
@@ -102,10 +102,9 @@ function Playlist() {
     setSelectedBg(e.target.name);
     console.info(selectedMusic);
   }
-  // const playlistStyle = `playlist ${selectedBg}`;
   return (
     <div
-      className="landscape-gif-box"
+      className="playlist-box"
       style={{ backgroundImage: `url(${selectedBg})` }}
     >
       <audio
