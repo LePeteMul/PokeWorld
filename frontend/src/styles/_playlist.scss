@@ -9,7 +9,7 @@
   width: auto;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   .intro-playlist-box {
     padding: 20px;
     box-shadow: $pixel-box-shadow;
@@ -18,7 +18,6 @@
     font-size: clamp(0.8rem, 1vw, 1rem);
     line-height: 1.5;
     max-width: 100%;
-    max-height: 30vh;
     margin-left: 5%;
 
     .intro-playlist-title {
@@ -32,9 +31,12 @@
     }
   }
 
-  .vaporeon {
-    width: 18rem;
-    height: 18rem;
+  .jigglypuff {
+    box-shadow: -5px 0 0 0 $border-color, 5px 0 0 0 $border-color,
+      0 -5px 0 0 $border-color, 0 5px 0 0 $border-color;
+    width: 60%;
+    height: 10rem;
+    margin: 0 20%;
   }
 }
 
@@ -52,7 +54,7 @@
 
 .playlist-box {
   box-shadow: $pixel-box-shadow;
-  overflow: scroll;
+  overflow-y: scroll;
   max-height: 40vh;
   width: 60%;
   margin: auto;
@@ -97,7 +99,7 @@
   .intro-playlist-box {
     display: none;
   }
-  .vaporeon {
+  .jigglypuff {
     display: none;
   }
   .playlist-box {
