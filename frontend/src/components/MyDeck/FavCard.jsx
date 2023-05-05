@@ -82,7 +82,9 @@ function FavCard({ index }) {
           <div className="Ability">
             {data
               ? data.abilities.map((value) => {
-                  return <div>{value.ability.name}</div>;
+                  return (
+                    <div key={value.ability.name}>{value.ability.name}</div>
+                  );
                 })
               : ""}
           </div>
