@@ -22,29 +22,20 @@
     z-index: -1;
     position: relative;
     margin-top: 20px;
-    animation: flip-translate 15s ease-in-out infinite;
+    animation: loop-infinite 6s linear infinite;
   }
 
-  @keyframes flip-translate {
+  @keyframes loop-infinite {
     0% {
-      transform: translateX(0px) rotateY(0deg);
-    }
-    45% {
-      transform: translateX(88vw) rotateY(0deg);
-    }
-    50% {
-      transform: translateX(88vw) rotateY(180deg);
-    }
-    95% {
-      transform: translateX(0px) rotateY(180deg);
+      transform: translateX(-20vw);
     }
     100% {
-      transform: translateX(0px) rotateY(0deg);
+      transform: translateX(+120vw);
     }
   }
 
   #logo {
-    margin: 20px auto;
+    margin: auto;
     width: 20%;
     min-width: 300px;
   }

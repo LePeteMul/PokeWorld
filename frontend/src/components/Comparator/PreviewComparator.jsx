@@ -489,7 +489,7 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
     <div className="global-preview">
       <div className="preview">
         <div className="sprites-comparator">
-          <h4 className="table1">Sprites</h4>
+          <h4 className="table1 grey">Sprites</h4>
           <img
             className="table-img"
             src={pokemon1.sprites.front_default}
