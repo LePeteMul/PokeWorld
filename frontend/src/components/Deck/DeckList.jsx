@@ -23,8 +23,7 @@ export default function DeckList({ name, image, id }) {
     if (favorite) {
       const actualFavorites = JSON.parse(localStorage.getItem("is-fav"));
       const index = actualFavorites.findIndex((pokemon) => pokemon === id);
-      console.warn(index);
-      console.warn(actualFavorites);
+
       actualFavorites.splice(index, 1);
       localStorage.setItem("is-fav", JSON.stringify(actualFavorites));
     } else {

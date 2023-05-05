@@ -81,5 +81,5 @@ Deck.propTypes = {
   selectedPoids: PropTypes.string.isRequired,
   selectedType: PropTypes.string.isRequired,
   selectedHeight: PropTypes.string.isRequired,
-  isClicked: PropTypes.arrayOf.isRequired,
+  isClicked: PropTypes.bool.isRequired,
 };

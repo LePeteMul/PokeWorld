@@ -8,7 +8,6 @@ function SearchBar({ handleSearchChange }) {
       <input
         onChange={handleSearchChange}
         id="searchbar"
-        onKeyUp="search_animal()"
         type="text"
         name="search"
         placeholder="Search Pokemon..."
