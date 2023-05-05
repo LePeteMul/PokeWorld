@@ -40,6 +40,23 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
             "psychic",
             "ghost",
           ].includes(type2)) ||
+        (type1 === "ghost" &&
+          [
+            "water",
+            "rock",
+            "ground",
+            "ice",
+            "bug",
+            "grass",
+            "dragon",
+            "electric",
+            "fairy",
+            "normal",
+            "poison",
+            "psychic",
+            "fighting",
+            "fire",
+          ].includes(type2)) ||
         (type1 === "bug" &&
           [
             "water",
@@ -252,6 +269,23 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
           "poison",
           "psychic",
           "ghost",
+        ].includes(type2)) ||
+      (type1 === "ghost" &&
+        [
+          "water",
+          "rock",
+          "ground",
+          "ice",
+          "bug",
+          "grass",
+          "dragon",
+          "electric",
+          "fairy",
+          "normal",
+          "poison",
+          "psychic",
+          "fighting",
+          "fire",
         ].includes(type2)) ||
       (type1 === "bug" &&
         [

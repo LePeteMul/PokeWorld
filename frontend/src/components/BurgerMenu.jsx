@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import pokeballMenuTop from "../assets/images/pokeball_Top.png";
-import pokeballMenuBottom from "../assets/images/pokeball_Bottom.png";
+import pokeballMenu from "../assets/images/pokeball_pix.png";
 
 function BurgerMenu() {
   const [burgerOpen, setBurgerOpen] = useState(true);
@@ -40,12 +39,7 @@ function BurgerMenu() {
           type="button"
           onClick={handleBurger}
         >
-          <img className="pokeball-menu-top" src={pokeballMenuTop} alt="" />
-          <img
-            className="pokeball-menu-bottom"
-            src={pokeballMenuBottom}
-            alt=""
-          />
+          <img className="pokeball-menu" src={pokeballMenu} alt="" />
         </button>
       </div>
     </>

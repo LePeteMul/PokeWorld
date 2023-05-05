@@ -14,7 +14,7 @@
   max-height: 150px;
   min-height: 80px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 3rem;
 
   #pika {
@@ -34,11 +34,6 @@
     }
   }
 
-  #pokeball {
-    margin-right: 50px;
-    width: 5rem;
-  }
-
   #logo {
     margin: auto;
     width: 20%;
@@ -56,18 +51,11 @@
       animation: none;
       display: none;
     }
-    #pokeball {
-      margin-right: 15px;
-      width: 2.6rem;
-      display: none;
-      position: absolute;
-    }
 
     #logo {
       margin: 20px auto;
       width: 40%;
       min-width: 160px;
-      transform: translate(+20%);
     }
   }
   .togglebutton {
