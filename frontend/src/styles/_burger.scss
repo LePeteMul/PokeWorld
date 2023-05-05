@@ -76,4 +76,14 @@
     top: 100px;
     right: 10%;
   }
+
+  .burger-box-button {
+    display: flex;
+    flex-direction: column;
+  }
+  .pokeball-menu-top,
+  .pokeball-menu-bottom {
+    width: 4rem;
+    height: 2rem;
+  }
 }
