@@ -1,12 +1,10 @@
 import { useState } from "react";
 import * as React from "react";
 import PropTypes from "prop-types";
-import CardsCompare from "../CardsCompare";
 import Cards from "../Cards";
 
-export default function DeckList({ name, image, id, test }) {
+export default function DeckList({ name, image, id }) {
   const [isShown, setIsShown] = useState(false);
-  const [cardCompare, setCardCompare] = useState(false);
   const [favorite, setFavorite] = useState(
     JSON.parse(localStorage.getItem("is-fav")) !== null
       ? JSON.parse(localStorage.getItem("is-fav")).includes(id)
@@ -15,10 +13,6 @@ export default function DeckList({ name, image, id, test }) {
 
   const handleClickCardShown = () => {
     setIsShown((current) => !current);
-  };
-
-  const handleClickCardCompare = () => {
-    setCardCompare((current) => !current);
   };
 
   const handleClickFavorite = () => {
@@ -49,27 +43,17 @@ export default function DeckList({ name, image, id, test }) {
         role="presentation"
         className={favorite ? "isFavorite" : "notFavorite"}
       />
-      {test === false ? (
-        <button
-          onClick={handleClickCardShown}
-          type="button"
-          className="poke-container"
-          key={id}
-        >
-          <img className="img-button" src={image} alt={name} /> <br />
-        </button>
-      ) : (
-        <button
-          onClick={handleClickCardCompare}
-          type="button"
-          className="poke-container"
-          key={id}
-        >
-          <img className="img-button" src={image} alt={name} /> <br />
-        </button>
-      )}
+
+      <button
+        onClick={handleClickCardShown}
+        type="button"
+        className="poke-container"
+        key={id}
+      >
+        <img className="img-button" src={image} alt={name} /> <br />
+      </button>
+
       {isShown && <Cards index={id} setIsShown={setIsShown} />}
-      {cardCompare && <CardsCompare index={id} />}
 
       <p className="pokeName">{name}</p>
     </div>
@@ -80,5 +64,4 @@ DeckList.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
-  test: PropTypes.bool.isRequired,
 };
