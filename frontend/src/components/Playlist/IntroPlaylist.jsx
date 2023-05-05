@@ -1,3 +1,5 @@
+import jigglypuff from "../../assets/images/jigglypuff.gif";
+
 function IntroPlaylist() {
   return (
     <div className="intro-playlist-box">
@@ -7,6 +9,8 @@ function IntroPlaylist() {
         Here, you can <span className="intro-bold-words">listen</span> to
         awesome music from the oldest pokemon games!
       </p>
+      <br />
+      <img className="jigglypuff" src={jigglypuff} alt="" />
     </div>
   );
 }
