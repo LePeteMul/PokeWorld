@@ -16,10 +16,8 @@ function ComparatorContainer() {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon?limit=151`)
       .then((poke) => {
-        console.warn(poke.data);
-
         list = poke.data.results;
-        console.warn(list);
+
         setPokemon(list);
       })
       .catch((err) => console.warn(err));
@@ -37,10 +35,8 @@ function ComparatorContainer() {
     setLoaded(true);
   }
   const onChange1 = (e) => {
-    console.warn(e.target.value);
     setPokname1(e.target.value.toString());
   };
-  console.warn(name1);
   const onChange2 = (e) => {
     setPokname2(e.target.value.toString());
   };
@@ -50,8 +46,6 @@ function ComparatorContainer() {
       getPokemons();
     }
   };
-
-  console.warn(pokStats1);
 
   if (loaded) {
     return (

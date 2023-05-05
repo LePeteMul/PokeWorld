@@ -677,8 +677,8 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
 }
 
 PreviewComparator.propTypes = {
-  pokemon1: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
-  pokemon2: PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
+  pokemon1: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  pokemon2: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 };
 
 export default PreviewComparator;

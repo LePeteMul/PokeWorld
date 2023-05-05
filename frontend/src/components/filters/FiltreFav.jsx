@@ -12,7 +12,7 @@ function FiltreFav({ isClicked, setIsClicked }) {
         id="fav-input"
         type="checkbox"
         checked={isClicked}
-        onClick={handleClickIsFav}
+        onChange={handleClickIsFav}
       />
       <label htmlFor="fav-input" className="fav-input-text">
         Favorites

@@ -32,7 +32,7 @@ SearchSelector.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
+      name: PropTypes.number.isRequired,
     })
   ).isRequired,
   onSubmit: PropTypes.func.isRequired,

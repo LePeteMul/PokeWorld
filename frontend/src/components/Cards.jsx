@@ -98,7 +98,9 @@ export default function Cards({ index, setIsShown }) {
           <div className="Ability">
             {data
               ? data.abilities.map((value) => {
-                  return <div>{value.ability.name}</div>;
+                  return (
+                    <div key={value.ability.name}>{value.ability.name}</div>
+                  );
                 })
               : ""}
           </div>
@@ -110,5 +112,5 @@ export default function Cards({ index, setIsShown }) {
 
 Cards.propTypes = {
   index: PropTypes.number.isRequired,
-  setIsShown: PropTypes.bool.isRequired,
+  setIsShown: PropTypes.func.isRequired,
 };

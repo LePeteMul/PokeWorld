@@ -17,7 +17,6 @@ function MyDeck() {
       .all(allFavPokemon.map((poke) => axios.get(poke)))
       .then((res) => setFavPokemon(res));
   }
-  console.warn(favPokemon);
 
   useEffect(() => {
     getFavPokemon();

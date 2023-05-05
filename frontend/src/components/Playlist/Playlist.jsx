@@ -107,7 +107,6 @@ function Playlist() {
   function handleMusic(e) {
     setSelectedMusic(e.target.value);
     setSelectedBg(e.target.name);
-    console.info(selectedMusic);
   }
   return (
     <div className="playlist-container">
@@ -118,9 +117,9 @@ function Playlist() {
         <div>
           <h2 className="playlist-title">Choose your music :</h2>
           <ul className="playlists">
-            {playList.map((music) => {
+            {playList.map((music, index) => {
               return (
-                <li className="playlist" key={music}>
+                <li className="playlist" key={music.id || index}>
                   <button
                     type="button"
                     onClick={(e) => handleMusic(e)}
