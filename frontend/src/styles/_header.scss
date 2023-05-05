@@ -14,7 +14,7 @@
   max-height: 150px;
   min-height: 80px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 3rem;
 
   #pika {
@@ -22,36 +22,21 @@
     z-index: -1;
     position: relative;
     margin-top: 20px;
-    animation: flip-translate 15s ease-in-out infinite;
+    animation: loop-infinite 6s linear infinite;
   }
 
-  @keyframes flip-translate {
+  @keyframes loop-infinite {
     0% {
-      transform: translateX(0px) rotateY(0deg);
-    }
-    45% {
-      transform: translateX(88vw) rotateY(0deg);
-    }
-    50% {
-      transform: translateX(88vw) rotateY(180deg);
-    }
-    95% {
-      transform: translateX(0px) rotateY(180deg);
+      transform: translateX(-20vw);
     }
     100% {
-      transform: translateX(0px) rotateY(0deg);
+      transform: translateX(+120vw);
     }
-  }
-
-  #pokeball {
-    margin-right: 50px;
-    width: 5rem;
   }
 
   #logo {
-    margin: 20px auto;
+    margin: auto;
     width: 20%;
-    transform: translate(-50%);
     min-width: 300px;
   }
 
@@ -66,18 +51,11 @@
       animation: none;
       display: none;
     }
-    #pokeball {
-      margin-right: 15px;
-      width: 2.6rem;
-      display: none;
-      position: absolute;
-    }
 
     #logo {
       margin: 20px auto;
       width: 40%;
       min-width: 160px;
-      transform: translate(0%);
     }
   }
   .togglebutton {

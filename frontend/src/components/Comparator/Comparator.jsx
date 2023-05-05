@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/Comparator/_comparator.scss";
 
 import IntroComparator from "./IntroComparator";
 import Header from "../Header";

@@ -40,6 +40,23 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
             "psychic",
             "ghost",
           ].includes(type2)) ||
+        (type1 === "ghost" &&
+          [
+            "water",
+            "rock",
+            "ground",
+            "ice",
+            "bug",
+            "grass",
+            "dragon",
+            "electric",
+            "fairy",
+            "normal",
+            "poison",
+            "psychic",
+            "fighting",
+            "fire",
+          ].includes(type2)) ||
         (type1 === "bug" &&
           [
             "water",
@@ -253,6 +270,23 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
           "psychic",
           "ghost",
         ].includes(type2)) ||
+      (type1 === "ghost" &&
+        [
+          "water",
+          "rock",
+          "ground",
+          "ice",
+          "bug",
+          "grass",
+          "dragon",
+          "electric",
+          "fairy",
+          "normal",
+          "poison",
+          "psychic",
+          "fighting",
+          "fire",
+        ].includes(type2)) ||
       (type1 === "bug" &&
         [
           "water",
@@ -455,7 +489,7 @@ function PreviewComparator({ pokemon1, pokemon2 }) {
     <div className="global-preview">
       <div className="preview">
         <div className="sprites-comparator">
-          <h4 className="table1">Sprites</h4>
+          <h4 className="table1 grey">Sprites</h4>
           <img
             className="table-img"
             src={pokemon1.sprites.front_default}
