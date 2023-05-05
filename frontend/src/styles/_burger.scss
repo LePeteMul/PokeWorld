@@ -19,9 +19,10 @@
   border-radius: 4px;
   opacity: 75%;
   font-weight: bold;
-  padding: 8px;
+  padding: 6px 48px 6px 48px;
   animation: slideMenuLeft 1s;
   right: 150px;
+  top: -16px;
 }
 
 @keyframes slideMenuLeft {
